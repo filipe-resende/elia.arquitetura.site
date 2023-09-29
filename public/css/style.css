@@ -544,38 +544,6 @@ ol {
 	transition: all 0.4s;
 }
 
-/* Feed.css */
-.img-container {
-  position: relative;
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.img-container:hover .image-overlay {
-  opacity: 1;
-}
-
-.hover-text {
-  display: none;
-}
-
-.img-container:hover .hover-text {
-  display: block;
-  /* Adicione estilos de posicionamento, cor de fundo, etc., conforme necessário */
-}
 .social-links a:hover {
 	color: #baff00;
 }
@@ -589,17 +557,12 @@ ol {
 	-webkit-transform-origin: right center;
 	    -ms-transform-origin: right center;
 	        transform-origin: right center;
-	bottom: 60%;
+	bottom: 85% !important;
 	z-index: 30;
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: 20px;
 }
-
- .hero-slider {
-	background-size: cover;
-	background-repeat: no-repeat
- }
 
 .hero-slider .hero-slide-item {
 	width: 100%;
@@ -674,13 +637,13 @@ ol {
 }
 
 .slide-content {
+	opacity: 1 !important;
 	margin-left: 350px;
 	margin-bottom: 50px;
 	padding-left: 190px;
 	padding-top: 170px;
 	padding-bottom: 70px;
 	position: relative;
-	opacity: 0;
 	-webkit-transition: all 0.6s;
 	-o-transition: all 0.6s;
 	transition: all 0.6s;
@@ -820,7 +783,7 @@ ol {
 	width: 50%;
 	height: 100%;
 	left: 0;
-	background-image: url("/public/img/cta-img.jpg");
+	background-image: url("/img/cta-img.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -1177,7 +1140,7 @@ ol {
 	height: calc(100% + 120px);
 	left: 0;
 	top: -60px;
-	background-image: url("/public/img/cta-img.jpg");
+	background-image: url("/img/cta-img.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -1886,6 +1849,10 @@ ol {
 		font-size: 12px;
 		margin-right: 10px;
 	}
+	.phone-number-icon{
+		font-size: 12px;
+		color: #000;
+	}
 	.team-member {
 		margin-bottom: 30px;
 	}
@@ -2020,6 +1987,7 @@ ol {
 		left: 0;
 	}
 	.slide-content {
+		opacity: 1;
 		margin-left: 70px;
 		padding: 0;
 		text-align: center;
@@ -2142,110 +2110,4 @@ ol {
 	.projects-slider {
 		padding: 0 15px;
 	}
-}
-
-
-/* Budget.css */
-
-.budget-title {
-  margin-bottom: 20px;
-  color: #D9865F;
-  font-family: 'MontserratAlternates'
-}
-
-.budget-description {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #003e6b;
-  margin-bottom: 20px;
-  font-family: 'MontserratAlternates'
-}
-
-.budget-form-row {
-  margin-bottom: 20px;
-}
-
-.budget-section-title {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  color: #D9865F;
-  font-family: 'MontserratAlternates';
-
-}
-
-@media (max-width: 768px) {
-  .col-padding{
-    padding: 0.5em;
-  }
-}
-
-.form-label {
-  color: #003e6b;
-  font-family:'MontserratAlternates'
-}
-
-/* Style the checkboxes */
-.MuiCheckbox-root {
-  color: #2196F3;
-}
-
-.budget-submit-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-/* Style the submit button */
-.MuiButton-containedPrimary {
-  background-color: #2196F3;
-  color: white;
-  padding: 10px 30px;
-  border-radius: 5px;
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
-}
-
-.MuiButton-containedPrimary:hover {
-  background-color: #1976D2;
-}
-
-.upload-thumbnail {
-  max-width: 100px;
-  max-height: 100px;
-  margin: 10px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .budget-container {
-    padding: 15px;
-  }
-
-  .budget-title {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .budget-description {
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-
-  .budget-form-row {
-    margin-bottom: 15px;
-  }
-
-  .budget-section-title {
-    font-size: 14px;
-    margin-bottom: 8px;
-    font-family: 'MontserratAlternates';
-  }
-
-  .MuiButton-containedPrimary {
-    padding: 8px 20px;
-    font-size: 12px;
-  }
 }
