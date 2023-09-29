@@ -169,9 +169,11 @@ export default function About() {
               </p>
             </div>
             <div className="col-lg-3 text-lg-right">
-              <a href="#" className="site-btn sb-dark mt-4">
-                Orçamento{' '}
-              </a>
+              <NavLink to="/orcamento">
+                <a href="#" className="site-btn sb-dark mt-4">
+                  Orçamento{' '}
+                </a>
+              </NavLink>
             </div>
           </div>
         </div>
