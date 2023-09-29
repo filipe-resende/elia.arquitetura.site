@@ -143,7 +143,7 @@ export default function Budget() {
       >
         <div className="container">
           <h1 className="header-title">
-            Orçamento<p>.</p>
+            Orçamento<span>.</span>
           </h1>
         </div>
       </section>
@@ -438,7 +438,8 @@ export default function Budget() {
                       position: 'relative',
                       backgroundColor: 'transparent',
                       marginRight: '15px',
-                      zIndex: 1
+                      zIndex: 1,
+                      textAlignLast: 'center'
                     }}
                     component="label"
                     startIcon={<CloudUploadIcon />}
@@ -524,19 +525,22 @@ export default function Budget() {
                   <div className="footer-item">
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <NavLink to="/">
+                          {' '}
+                          <a href="#">Início</a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a href="#">About us</a>
+                        <NavLink to="/sobre">
+                          {' '}
+                          <a href="#">Sobre nós</a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a href="#">Services</a>
-                      </li>
-                      <li>
-                        <a href="#">Portfolio</a>
-                      </li>
-                      <li>
-                        <a href="#">Blog</a>
+                        <NavLink to="/orcamento">
+                          {' '}
+                          <a href="#">Orçamento</a>
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
@@ -546,39 +550,6 @@ export default function Budget() {
                     <ul>
                       <li>
                         <a href="#">Terms & Conditions</a>
-                      </li>
-                      <li>
-                        <a href="#">FAQ</a>
-                      </li>
-                      <li>
-                        <a href="#">Help Desk</a>
-                      </li>
-                      <li>
-                        <a href="#">Job Aplications</a>
-                      </li>
-                      <li>
-                        <a href="#">Site Map</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="footer-item">
-                    <ul>
-                      <li>
-                        <a href="#">Privacy</a>
-                      </li>
-                      <li>
-                        <a href="#">Contact us</a>
-                      </li>
-                      <li>
-                        <a href="#">Newsletter</a>
-                      </li>
-                      <li>
-                        <a href="#">Clients Testimonials</a>
-                      </li>
-                      <li>
-                        <a href="#">FAQ</a>
                       </li>
                     </ul>
                   </div>

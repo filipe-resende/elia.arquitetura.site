@@ -72,10 +72,7 @@ function Home() {
                   Acessível
                   <br /> e descomplicada
                 </h2>
-                <a
-                  href="https://www.instagram.com/eliastudioarq/"
-                  className="site-btn sb-light"
-                >
+                <a href="#projects" className="site-btn sb-light">
                   Veja nossos projetos.
                 </a>
               </div>
@@ -208,10 +205,9 @@ function Home() {
                 <h3>Parcelamento do solo</h3>
                 <p>
                   Elaboramos os projeto e materiais urbanísticos, R.T e fazemos
-                  todo a protocolização dos documentos exigidos{' '}
-                  <strong>especificamente</strong>
-                  para o caso. Aplicável na modalidade modificação de
-                  parcelamento.
+                  todo a protocolização dos documentos exigidos&nbsp;
+                  <strong>especificamente</strong>&nbsp; para o caso. Aplicável
+                  na modalidade modificação de parcelamento.
                 </p>
               </div>
             </div>
@@ -283,7 +279,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <div className="projects-section pb50">
+      <div id="projects" className="projects-section pb50">
         <div className="container">
           <div className="row">
             <div className="col-lg-3">
@@ -322,19 +318,22 @@ function Home() {
                   <div className="footer-item">
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <NavLink to="/">
+                          {' '}
+                          <a href="#">Início</a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a href="#">About us</a>
+                        <NavLink to="/sobre">
+                          {' '}
+                          <a href="#">Sobre nós</a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a href="#">Services</a>
-                      </li>
-                      <li>
-                        <a href="#">Portfolio</a>
-                      </li>
-                      <li>
-                        <a href="#">Blog</a>
+                        <NavLink to="/orcamento">
+                          {' '}
+                          <a href="#">Orçamento</a>
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
@@ -344,39 +343,6 @@ function Home() {
                     <ul>
                       <li>
                         <a href="#">Terms & Conditions</a>
-                      </li>
-                      <li>
-                        <a href="#">FAQ</a>
-                      </li>
-                      <li>
-                        <a href="#">Help Desk</a>
-                      </li>
-                      <li>
-                        <a href="#">Job Aplications</a>
-                      </li>
-                      <li>
-                        <a href="#">Site Map</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="footer-item">
-                    <ul>
-                      <li>
-                        <a href="#">Privacy</a>
-                      </li>
-                      <li>
-                        <a href="#">Contact us</a>
-                      </li>
-                      <li>
-                        <a href="#">Newsletter</a>
-                      </li>
-                      <li>
-                        <a href="#">Clients Testimonials</a>
-                      </li>
-                      <li>
-                        <a href="#">FAQ</a>
                       </li>
                     </ul>
                   </div>

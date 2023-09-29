@@ -57,10 +57,10 @@ export default function About() {
                     A Eliá Studio Arquitetura se dedica a criar projetos com
                     foco na melhoria da qualidade de vida através de soluções
                     únicas que proporcionam conforto, segurança, bem-estar, tudo
-                    isso aliado a criatividade, agilidade e assertividade.
-                    Estamos aqui para tornar realidade o seu sonho de forma que
-                    se adapte perfeitamente ao seu orçamento. Estamos à
-                    disposição para auxiliá-lo na concretização do seu projeto.
+                    isso aliado a criatividade e agilidade. Estamos aqui para
+                    tornar realidade o seu sonho de forma que se adapte
+                    perfeitamente ao seu orçamento. Estamos à disposição para
+                    auxiliá-lo na concretização do seu projeto.
                   </p>
                 </div>
                 <div className="col-md-6">
@@ -71,8 +71,7 @@ export default function About() {
                     Além disso, oferecemos a flexibilidade de trabalhar
                     presencialmente ou à distância. Temos o compromisso de
                     transformar sonhos em realidade, sempre alinhados com as
-                    expectativas do cliente e seguindo um processo altamente
-                    organizado.
+                    suas expectativas.
                   </p>
                 </div>
               </div>
@@ -107,14 +106,14 @@ export default function About() {
                     “ Eliá, amei o projeto me surpreendeu muito. Nunca imaginei
                     ser como você me mandou, você me deu muita atenção e tirou
                     todas minhas dúvidas, superou minhas expectativas. Super
-                    indico vocês. Agora só colocar em prática “
+                    indico vocês. Agora só colocar em prática. “
                   </p>
                 </div>
                 <div className="ts-item">
                   <h4>Dayse</h4>
                   <p>
                     “ Nossa ficou do jeito que nós queríamos . Mto obrigado! E
-                    que Deus abençoe muito sua vida “
+                    que Deus abençoe muito sua vida. “
                   </p>
                 </div>
                 <div className="ts-item">
@@ -126,7 +125,7 @@ export default function About() {
                     Nossa, parece tudo tão perfeito que ainda nem acredito que é
                     meu mesmo. Vocês estão de parabéns, sempre nos acompanhando,
                     tirando nossas dúvidas e caminhando junto comigo. Vc foi um
-                    presente de Deus em minha vida.“
+                    presente de Deus em minha vida. “
                   </p>
                 </div>
                 <div className="ts-item">
@@ -137,7 +136,7 @@ export default function About() {
                     atual e ao mesmo tempo sofisticado, e vocês conseguiram
                     entregar tudo e mais umpouco! Com certeza irei indicar
                     vocês! Além de um excelente projeto o atendimento é
-                    maravilhoso ... Até o próximo projeto “
+                    maravilhoso ... Até o próximo projeto. “
                   </p>
                 </div>
                 <div className="ts-item">
@@ -147,7 +146,7 @@ export default function About() {
                     sonhei... Meu Deus vc fez do jeito que eu tentava descrever
                     para você. Agradeço a Elia pela excelência e competência no
                     trabalho feito. Estou apaixonada e muitoagradecida por cada
-                    detalhe e carinho conosco “
+                    detalhe e carinho conosco. “
                   </p>
                 </div>
               </div>
@@ -165,7 +164,7 @@ export default function About() {
               </h1>
               <p>
                 Seu projeto de arquitetura e interiores mais personalizado,
-                funcionai e acessível.
+                funcional e acessível.
               </p>
             </div>
             <div className="col-lg-3 text-lg-right">
@@ -201,19 +200,22 @@ export default function About() {
                   <div className="footer-item">
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <NavLink to="/">
+                          {' '}
+                          <a href="#">Início</a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a href="#">About us</a>
+                        <NavLink to="/sobre">
+                          {' '}
+                          <a href="#">Sobre nós</a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a href="#">Services</a>
-                      </li>
-                      <li>
-                        <a href="#">Portfolio</a>
-                      </li>
-                      <li>
-                        <a href="#">Blog</a>
+                        <NavLink to="/orcamento">
+                          {' '}
+                          <a href="#">Orçamento</a>
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
@@ -223,39 +225,6 @@ export default function About() {
                     <ul>
                       <li>
                         <a href="#">Terms & Conditions</a>
-                      </li>
-                      <li>
-                        <a href="#">FAQ</a>
-                      </li>
-                      <li>
-                        <a href="#">Help Desk</a>
-                      </li>
-                      <li>
-                        <a href="#">Job Aplications</a>
-                      </li>
-                      <li>
-                        <a href="#">Site Map</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="footer-item">
-                    <ul>
-                      <li>
-                        <a href="#">Privacy</a>
-                      </li>
-                      <li>
-                        <a href="#">Contact us</a>
-                      </li>
-                      <li>
-                        <a href="#">Newsletter</a>
-                      </li>
-                      <li>
-                        <a href="#">Clients Testimonials</a>
-                      </li>
-                      <li>
-                        <a href="#">FAQ</a>
                       </li>
                     </ul>
                   </div>
