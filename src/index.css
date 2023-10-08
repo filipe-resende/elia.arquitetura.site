@@ -2358,3 +2358,14 @@ ol {
 	color: red;
 	font-size: 12px;
 }
+
+.loading-text {
+	text-align: center;
+	font-size: 18px;
+}
+
+.loading-text::after {
+	content: " Carregando";
+	font-weight: bold;
+	color: #baff00;
+}

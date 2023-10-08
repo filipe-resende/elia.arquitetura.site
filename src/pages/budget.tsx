@@ -3,7 +3,9 @@ import {
   Checkbox,
   FormControlLabel,
   FormGroup,
-  IconButton
+  IconButton,
+  Modal,
+  CircularProgress
 } from '@mui/material'
 import React, { useState } from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
@@ -19,6 +21,17 @@ import { styled } from '@mui/material/styles'
 import { IForms } from '../interfaces/IForm'
 
 export default function Budget() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const openModal = () => {
+    setModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalOpen(false)
+  }
+
   const VisuallyHiddenInput = styled('input')`
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -99,9 +112,15 @@ export default function Budget() {
 
   const handleFormSubmit = async () => {
     try {
+      openModal() // Abre a modal de carregamento
+      setIsSubmitting(true) // Define que o envio está em andamento
       await enviarMensagem(formData)
+      setIsSubmitting(false) // Define que o envio foi concluído
+      closeModal() // Fecha a modal após o envio
       alert('Mensagem enviada com sucesso!')
     } catch (error) {
+      setIsSubmitting(false) // Define que o envio foi concluído mesmo em caso de erro
+      closeModal() // Fecha a modal após o envio
       alert('Ocorreu um erro ao enviar a mensagem.')
     }
   }
@@ -506,7 +525,7 @@ export default function Budget() {
                   }}
                   onClick={handleFormSubmit}
                   color="primary"
-                  disabled={!isFormValid}
+                  disabled={!isFormValid || isSubmitting} // Desabilita o botão enquanto estiver enviando
                 >
                   Enviar
                 </Button>
@@ -576,6 +595,25 @@ export default function Budget() {
           reserved. <br />
         </div>
       </footer>
+
+      <Modal
+        open={modalOpen}
+        onClose={closeModal}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+      >
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}
+        >
+          <CircularProgress />
+          <p id="modal-description" className="loading-text"></p>
+        </div>
+      </Modal>
     </div>
   )
 }

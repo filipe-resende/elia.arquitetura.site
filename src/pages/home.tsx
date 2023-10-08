@@ -378,6 +378,11 @@ function Home() {
                 <div className="cta-img-icon">
                   <Image src="/img/icon/color/3.png" alt=""></Image>
                 </div>
+                <div className="cta-img-icon">
+                  <NavLink to={'/orcamento'} className="site-btn sb-light">
+                    Faça seu orçamento
+                  </NavLink>
+                </div>
               </div>
             </div>
           </div>
