@@ -8,7 +8,6 @@ function Home() {
   const toggleNavbar = () => {
     setIsOpen(!isOpen)
   }
-  const listaItens = ['capa-loja.jpg', 'loja1.jpg', 'loja2.jpg']
 
   return (
     <div className="App">
