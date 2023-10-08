@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Image } from 'react-bootstrap'
-import Instagram from '../instagram'
+import { Container, Image } from 'react-bootstrap'
 
 function Home() {
   const [isOpen, setIsOpen] = useState(true)
@@ -9,6 +8,7 @@ function Home() {
   const toggleNavbar = () => {
     setIsOpen(!isOpen)
   }
+  const listaItens = ['capa-loja.jpg', 'loja1.jpg', 'loja2.jpg']
 
   return (
     <div className="App">
@@ -214,6 +214,145 @@ function Home() {
           </div>
         </div>
       </section>
+      <section id="projects" className="projects-section pb50">
+        <Container>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="section-title">
+                <h1>Projetos</h1>
+              </div>
+              <div className="row">
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/loja`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/capa-loja.jpg"
+                        className="w-100 hover-effect"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Lojas C</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/escritorio`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/capa-escritorio.jpg"
+                        className="w-100 hover-effect"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Escritório J</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/area`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/area-laser-capa.jpg"
+                        className="w-100 hover-effect"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Área de Convívio AD</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/estetica`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/estetica-capa.jpg"
+                        className="w-100 hover-effect"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Estúdio de Beleza F</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/gourmet`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/gourmet-capa.jpg"
+                        className="w-100 hover-effect"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Área Gourmet DW</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/cozinha`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/cozinha-capa.jpg"
+                        className="w-100 hover-effect"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Cozinha FF</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/area`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/area-gourmet-capa.jpg"
+                        className="w-100 hover-effect"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Area Gourmet FF</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/sacada`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/sacada-capa.jpg"
+                        className="w-100 hover-effect"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Sacada FF</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+                <div className="col-lg-4 mb-3 text-center">
+                  <NavLink to={`/projetos/sala`}>
+                    <div className="card border-0">
+                      <img
+                        src="/img/projetos/sala-capa.jpg"
+                        className="w-100"
+                      />
+                      <div className="card-body">
+                        <h5 className="mb-1">Sala AD</h5>
+                        <p className="small font-weight-thin">3 foto(s)</p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
       <section className="cta-section pt100 pb50">
         <div className="cta-image-box"></div>
         <div className="container">
@@ -279,23 +418,6 @@ function Home() {
           </div>
         </div>
       </section>
-      <div id="projects" className="projects-section pb50">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3">
-              <div className="section-title">
-                <h1>Projetos</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="single-project set-bg apart">
-          <div className="project-content">
-            <Instagram />
-          </div>
-        </div>
-      </div>
       <footer className="footer-section">
         <div className="footer-social">
           <div className="social-links">

@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom'
 import Home from '../pages/home'
 import About from '../pages/about'
 import Budget from '../pages/budget'
+import Projects from '../pages/projects'
 
 export const Routes = () =>
   useRoutes([
@@ -25,5 +26,9 @@ export const Routes = () =>
     {
       path: '*',
       element: <Home />
+    },
+    {
+      path: '/projetos/:projeto',
+      element: <Projects />
     }
   ])

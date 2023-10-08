@@ -164,6 +164,9 @@ export default function Budget() {
                     variant="outlined"
                     fullWidth
                   />
+                  {formData.nome.trim() === '' && (
+                    <span className="required-label">Campo obrigatório*</span>
+                  )}
                 </Col>
                 <Col className="col-padding" lg={6} md={12}>
                   <TextField
@@ -174,6 +177,9 @@ export default function Budget() {
                     variant="outlined"
                     fullWidth
                   />
+                  {formData.email.trim() === '' && (
+                    <span className="required-label">Campo obrigatório*</span>
+                  )}
                 </Col>
               </Row>
               <Row className="budget-form-row">
@@ -186,6 +192,9 @@ export default function Budget() {
                     variant="outlined"
                     fullWidth
                   />
+                  {formData.telefone.trim() === '' && (
+                    <span className="required-label">Campo obrigatório*</span>
+                  )}
                 </Col>
                 <Col className="col-padding" lg={6} md={12}>
                   <TextField
@@ -196,6 +205,9 @@ export default function Budget() {
                     variant="outlined"
                     fullWidth
                   />
+                  {formData.endereco.trim() === '' && (
+                    <span className="required-label">Campo obrigatório*</span>
+                  )}
                 </Col>
               </Row>
               <Row className="budget-options-row">

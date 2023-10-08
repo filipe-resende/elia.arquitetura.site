@@ -169,15 +169,17 @@ ol {
 	border-left-color: transparent;
 	animation: loader 0.8s linear infinite;
 	-webkit-animation: loader 0.8s linear infinite;
-	}
+}
 
 @keyframes loader {
 	0% {
 		transform: rotate(0deg);
 	}
+
 	50% {
 		transform: rotate(180deg);
 	}
+
 	100% {
 		transform: rotate(360deg);
 	}
@@ -187,9 +189,11 @@ ol {
 	0% {
 		-webkit-transform: rotate(0deg);
 	}
+
 	50% {
 		-webkit-transform: rotate(180deg);
 	}
+
 	100% {
 		-webkit-transform: rotate(360deg);
 	}
@@ -419,8 +423,8 @@ ol {
 .img-popup-warp .mfp-content {
 	opacity: 0;
 	-webkit-transform: scale(0.8);
-	    -ms-transform: scale(0.8);
-	        transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
@@ -429,8 +433,8 @@ ol {
 .img-popup-warp.mfp-ready .mfp-content {
 	opacity: 1;
 	-webkit-transform: scale(1);
-	    -ms-transform: scale(1);
-	        transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
 }
 
 /*----------------------------------------*/
@@ -548,36 +552,37 @@ ol {
 
 /* Feed.css */
 .img-container {
-  position: relative;
+	position: relative;
 }
 
 .image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
 .img-container:hover .image-overlay {
-  opacity: 1;
+	opacity: 1;
 }
 
 .hover-text {
-  display: none;
+	display: none;
 }
 
 .img-container:hover .hover-text {
-  display: block;
-  /* Adicione estilos de posicionamento, cor de fundo, etc., conforme necessário */
+	display: block;
+	/* Adicione estilos de posicionamento, cor de fundo, etc., conforme necessário */
 }
+
 .social-links a:hover {
 	color: #baff00;
 }
@@ -586,11 +591,11 @@ ol {
 	position: absolute;
 	right: 140px;
 	-webkit-transform: rotate(-90deg);
-	    -ms-transform: rotate(-90deg);
-	        transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 	-webkit-transform-origin: right center;
-	    -ms-transform-origin: right center;
-	        transform-origin: right center;
+	-ms-transform-origin: right center;
+	transform-origin: right center;
 	bottom: 60%;
 	z-index: 30;
 	color: #fff;
@@ -598,10 +603,10 @@ ol {
 	letter-spacing: 20px;
 }
 
- .hero-slider {
+.hero-slider {
 	background-size: cover;
 	background-repeat: no-repeat
- }
+}
 
 .hero-slider .hero-slide-item {
 	width: 100%;
@@ -764,8 +769,8 @@ ol {
 	left: 25px;
 	top: -80px;
 	-webkit-transform: rotate(-65deg);
-	    -ms-transform: rotate(-65deg);
-	        transform: rotate(-65deg);
+	-ms-transform: rotate(-65deg);
+	transform: rotate(-65deg);
 }
 
 .service-box .readmore {
@@ -948,7 +953,7 @@ ol {
 	transition: .8s;
 	-webkit-transition: .8s;
 	-ms-transform: translateX(0);
-	    transform: translateX(0);
+	transform: translateX(0);
 	-webkit-transform: translateX(0);
 	opacity: 1;
 }
@@ -1014,7 +1019,7 @@ ol {
 .projects-slider .single-project.__loading {
 	opacity: 0;
 	-ms-transform: translateX(40px);
-	    transform: translateX(40px);
+	transform: translateX(40px);
 	-webkit-transform: translateX(40px);
 }
 
@@ -1232,7 +1237,7 @@ ol {
 	bottom: 37px;
 	right: 0;
 	-webkit-box-shadow: 6px 7px 20px rgba(114, 114, 114, 0.21);
-	        box-shadow: 6px 7px 20px rgba(114, 114, 114, 0.21);
+	box-shadow: 6px 7px 20px rgba(114, 114, 114, 0.21);
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
@@ -1253,7 +1258,7 @@ ol {
 .team-member:hover .member-info {
 	background: #baff00;
 	-webkit-box-shadow: 0px 0px 0px rgba(114, 114, 114, 0.21);
-	        box-shadow: 0px 0px 0px rgba(114, 114, 114, 0.21);
+	box-shadow: 0px 0px 0px rgba(114, 114, 114, 0.21);
 }
 
 .promo-section {
@@ -1737,7 +1742,7 @@ ol {
 .portfolio-filter li.active {
 	text-decoration: underline;
 	-webkit-text-decoration-color: #2046f2;
-	        text-decoration-color: #2046f2;
+	text-decoration-color: #2046f2;
 }
 
 .portfolio-warp {
@@ -1823,26 +1828,33 @@ ol {
 	.phone-number {
 		margin-right: 30px;
 	}
+
 	.nav-menu ul li a {
 		margin-right: 20px;
 	}
+
 	.slide-content {
 		margin-left: 220px;
 	}
+
 	.milestone p {
 		margin-left: 10px;
 		font-size: 17px;
 	}
+
 	.milestone h2 {
 		font-size: 55px;
 	}
+
 	.milestone:after {
 		width: 90px;
 		height: 90px;
 	}
+
 	.slide-num-holder {
 		right: 20px;
 	}
+
 	.hero-right-text {
 		right: 100px;
 	}
@@ -1853,6 +1865,7 @@ ol {
 	.logo-area {
 		padding: 20px 40px 30px;
 	}
+
 	.slide-content {
 		margin-left: 170px;
 		margin-bottom: -35px;
@@ -1860,72 +1873,90 @@ ol {
 		padding-top: 120px;
 		padding-bottom: 30px;
 	}
+
 	.slide-content h2 {
 		font-size: 60px;
 		line-height: 60px;
 	}
+
 	.slide-content:after {
 		border-top: 100px solid #baff00;
 		border-left: 100px solid #baff00;
 		border-bottom: 60px solid #baff00;
 	}
+
 	.hero-slider .owl-nav {
 		left: 170px;
 	}
+
 	.slide-num-holder {
 		right: 20px;
 	}
+
 	.hero-right-text {
 		bottom: 70%;
 		right: 100px;
 	}
+
 	.nav-menu ul li a {
 		margin-right: 5px;
 		font-size: 13px;
 		padding: 37px 7px 5px;
 	}
+
 	.phone-number {
 		font-size: 12px;
 		margin-right: 10px;
 	}
+
 	.team-member {
 		margin-bottom: 30px;
 	}
+
 	.portfolio-warp .grid-item {
 		width: 50%;
 	}
+
 	.portfolio-warp .grid-item.grid-wide,
 	.portfolio-warp .grid-item.grid-long {
 		width: 50%;
 	}
+
 	.portfolio-warp .grid-sizer {
 		width: 50%;
 	}
+
 	.solid-service-box {
 		margin-bottom: 30px;
 	}
+
 	.cta-section {
 		background: #222;
 		margin-bottom: 0;
 	}
+
 	.testimonials-section {
 		background: #222;
 		margin: 0;
 	}
+
 	.testimonials-image-box,
 	.testimonials-section:after,
 	.cta-image-box,
 	.cta-section:after {
 		display: none;
 	}
+
 	.hero-section,
 	.hero-slider .hero-slide-item {
 		height: 850px;
 	}
+
 	.milestone,
 	.solid-service-box {
 		margin-bottom: 30px;
 	}
+
 	.footer-section .footer-social {
 		width: auto;
 		top: -25px;
@@ -1933,18 +1964,22 @@ ol {
 		padding: 10px;
 		margin-right: -133px;
 	}
+
 	.footer-section .social-links a {
 		display: inline-block;
 		padding: 0 15px;
 		margin-bottom: 0;
 	}
+
 	.projects-filter-nav {
 		text-align: left;
 	}
+
 	.projects-filter-nav li {
 		margin-left: 0;
 		margin-right: 15px;
 	}
+
 	.footer-section .copyright {
 		position: relative;
 		width: 100%;
@@ -1959,21 +1994,26 @@ ol {
 
 /* Large Mobile :480px. */
 @media only screen and (max-width: 767px) {
+
 	h1,
 	.sp-title {
 		font-size: 45px;
 	}
+
 	.page-header-section .header-title {
 		font-size: 55px;
 	}
+
 	.left-bar {
 		width: 70px;
 	}
+
 	.slide-content:after,
 	.hero-right-text,
 	.phone-number {
 		display: none;
 	}
+
 	.nav-switch {
 		position: absolute;
 		right: 20px;
@@ -1982,6 +2022,7 @@ ol {
 		top: 20px;
 		display: block;
 	}
+
 	.nav-menu {
 		position: absolute;
 		width: calc(100% - 90px);
@@ -1991,41 +2032,50 @@ ol {
 		margin-top: 11px;
 		display: none;
 	}
+
 	.nav-menu ul li a {
 		display: block;
 		padding: 16px 21px;
 		border-bottom: 1px solid #202020;
 		margin-right: 0;
 	}
+
 	.nav-menu ul li a:after {
 		left: 20px;
 	}
+
 	.nav-menu ul li.active>a:after,
 	.nav-menu ul li a:hover:after {
 		height: 10px;
 	}
+
 	.hero-section {
 		height: auto;
 	}
+
 	.hero-slider .hero-slide-item {
 		padding: 150px 0;
 		height: auto;
 	}
+
 	.slide-content h2 {
 		font-size: 60px;
 		line-height: 60px;
 	}
+
 	.hero-slider .owl-nav {
 		padding-left: 70px;
 		width: 100%;
 		text-align: center;
 		left: 0;
 	}
+
 	.slide-content {
 		margin-left: 70px;
 		padding: 0;
 		text-align: center;
 	}
+
 	.slide-num-holder,
 	.slide-num-holder.test-slider {
 		right: 0;
@@ -2033,47 +2083,59 @@ ol {
 		width: 136px;
 		padding-top: 18px;
 	}
+
 	.slide-num-holder span,
 	.slide-num-holder.test-slider span {
 		font-size: 40px;
 	}
+
 	.slide-num-holder.test-slider {
 		bottom: -135px;
 	}
+
 	.team-member {
 		margin-bottom: 30px;
 	}
+
 	.portfolio-warp .grid-item {
 		width: 50%;
 	}
+
 	.portfolio-warp .grid-item.grid-wide,
 	.portfolio-warp .grid-item.grid-long {
 		width: 50%;
 	}
+
 	.portfolio-warp .grid-sizer {
 		width: 50%;
 	}
+
 	.cta-section {
 		background: #222;
 		margin-bottom: 0;
 	}
+
 	.testimonials-section {
 		background: #222;
 		margin: 0;
 	}
+
 	.testimonials-image-box,
 	.testimonials-section:after,
 	.cta-image-box,
 	.cta-section:after {
 		display: none;
 	}
+
 	.milestone,
 	.solid-service-box {
 		margin-bottom: 30px;
 	}
+
 	.projects-filter-nav {
 		text-align: left;
 	}
+
 	.footer-section .footer-social {
 		width: auto;
 		top: -25px;
@@ -2081,11 +2143,13 @@ ol {
 		padding: 10px;
 		margin-right: -133px;
 	}
+
 	.footer-section .social-links a {
 		display: inline-block;
 		padding: 0 15px;
 		margin-bottom: 0;
 	}
+
 	.footer-section .copyright {
 		position: relative;
 		width: 100%;
@@ -2097,6 +2161,7 @@ ol {
 		padding-left: 15px;
 		text-align: center;
 	}
+
 	.footer-item {
 		margin-bottom: 40px;
 	}
@@ -2107,40 +2172,50 @@ ol {
 	.logo-area {
 		padding: 20px 30px 30px;
 	}
+
 	.header-area {
 		background: #121212;
 		padding-right: 66px;
 	}
+
 	.nav-menu {
 		width: 100%;
 		left: 0;
 		margin-top: 0;
 		border-top: 2px solid;
 	}
+
 	.left-bar {
 		display: none;
 	}
+
 	.hero-slider .owl-nav {
 		padding-left: 0;
 	}
+
 	.slide-content {
 		margin-left: 0;
 		padding: 0 15px;
 	}
+
 	.slide-content h2 {
 		font-size: 35px;
 		line-height: 1.5;
 	}
+
 	.portfolio-warp .grid-item {
 		width: 100%;
 	}
+
 	.portfolio-warp .grid-item.grid-wide,
 	.portfolio-warp .grid-item.grid-long {
 		width: 100%;
 	}
+
 	.portfolio-warp .grid-sizer {
 		width: 100%;
 	}
+
 	.projects-slider {
 		padding: 0 15px;
 	}
@@ -2150,104 +2225,136 @@ ol {
 /* Budget.css */
 
 .budget-title {
-  margin-bottom: 20px;
-  color: #D9865F;
-  font-family: 'MontserratAlternates'
+	margin-bottom: 20px;
+	color: #D9865F;
+	font-family: 'MontserratAlternates'
 }
 
 .budget-description {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #003e6b;
-  margin-bottom: 20px;
-  font-family: 'MontserratAlternates'
+	font-size: 14px;
+	line-height: 1.6;
+	color: #003e6b;
+	margin-bottom: 20px;
+	font-family: 'MontserratAlternates'
 }
 
 .budget-form-row {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .budget-section-title {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  color: #D9865F;
-  font-family: 'MontserratAlternates';
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	color: #D9865F;
+	font-family: 'MontserratAlternates';
 
 }
 
 @media (max-width: 768px) {
-  .col-padding{
-    padding: 0.5em;
-  }
+	.col-padding {
+		padding: 0.5em;
+	}
 }
 
 .form-label {
-  color: #003e6b;
-  font-family:'MontserratAlternates'
+	color: #003e6b;
+	font-family: 'MontserratAlternates'
 }
 
 /* Style the checkboxes */
 .MuiCheckbox-root {
-  color: #2196F3;
+	color: #2196F3;
 }
 
 .budget-submit-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
 }
 
 /* Style the submit button */
 .MuiButton-containedPrimary {
-  background-color: #2196F3;
-  color: white;
-  padding: 10px 30px;
-  border-radius: 5px;
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
+	background-color: #2196F3;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 5px;
+	font-size: 14px;
+	text-transform: uppercase;
+	transition: background-color 0.3s;
 }
 
 .MuiButton-containedPrimary:hover {
-  background-color: #1976D2;
+	background-color: #1976D2;
 }
 
 .upload-thumbnail {
-  max-width: 100px;
-  max-height: 100px;
-  margin: 10px;
+	max-width: 100px;
+	max-height: 100px;
+	margin: 10px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .budget-container {
-    padding: 15px;
-  }
+	.budget-container {
+		padding: 15px;
+	}
 
-  .budget-title {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
+	.budget-title {
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
 
-  .budget-description {
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
+	.budget-description {
+		font-size: 12px;
+		margin-bottom: 15px;
+	}
 
-  .budget-form-row {
-    margin-bottom: 15px;
-  }
+	.budget-form-row {
+		margin-bottom: 15px;
+	}
 
-  .budget-section-title {
-    font-size: 14px;
-    margin-bottom: 8px;
-    font-family: 'MontserratAlternates';
-  }
+	.budget-section-title {
+		font-size: 14px;
+		margin-bottom: 8px;
+		font-family: 'MontserratAlternates';
+	}
 
-  .MuiButton-containedPrimary {
-    padding: 8px 20px;
-    font-size: 12px;
-  }
+	.MuiButton-containedPrimary {
+		padding: 8px 20px;
+		font-size: 12px;
+	}
+}
+
+.card-body {
+	flex: 1 1 auto;
+	padding: 2rem 2rem;
+}
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0.25rem;
+}
+
+.small {
+	text-align: center;
+}
+
+.hover-effect:hover {
+	opacity: 0.8;
+	transform: scale(1.05);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.required-label {
+	color: red;
+	font-size: 12px;
 }
