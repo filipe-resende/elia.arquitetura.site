@@ -253,7 +253,7 @@ function Home() {
                   <NavLink to={`/projetos/area`}>
                     <div className="card border-0">
                       <img
-                        src="/img/projetos/area-laser-capa.jpg"
+                        src="/img/projetos/area-lazer-capa.jpg"
                         className="w-100 hover-effect"
                       />
                       <div className="card-body">
@@ -306,7 +306,7 @@ function Home() {
                   </NavLink>
                 </div>
                 <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/area`}>
+                  <NavLink to={`/projetos/lazer`}>
                     <div className="card border-0">
                       <img
                         src="/img/projetos/area-gourmet-capa.jpg"
@@ -368,6 +368,11 @@ function Home() {
                 dia. Após o preenchimento nossa equipe entrará em contato com um
                 orçamento feito especialmente para você.{' '}
               </p>
+              <div className="cta-img-icon">
+                <NavLink to={'/orcamento'} className="site-btn sb-light">
+                  Faça seu orçamento
+                </NavLink>
+              </div>
               <div className="cta-icons">
                 <div className="cta-img-icon">
                   <Image src="/img/icon/light/1.png" alt=""></Image>
@@ -377,11 +382,6 @@ function Home() {
                 </div>
                 <div className="cta-img-icon">
                   <Image src="/img/icon/color/3.png" alt=""></Image>
-                </div>
-                <div className="cta-img-icon">
-                  <NavLink to={'/orcamento'} className="site-btn sb-light">
-                    Faça seu orçamento
-                  </NavLink>
                 </div>
               </div>
             </div>

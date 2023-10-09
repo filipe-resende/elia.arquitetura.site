@@ -13,8 +13,8 @@ export default function Projects() {
     estetica: ['estetica-capa.jpg', 'estetica1.jpg', 'estetica2.jpg'],
     gourmet: ['gourmet-capa.jpg', 'gourmet1.jpg', 'gourmet2.jpg'],
     cozinha: ['cozinha-capa.jpg', 'cozinha1.jpg', 'cozinha2.jpg'],
-    laser: ['area-laser-capa.jpg', 'area-laser1.jpg', 'area-laser2.jpg'],
-    area: ['area-gourmet-capa.jpg', 'area-gourmet1.jpg', 'area-gourmet2.jpg'],
+    lazer: ['area-gourmet-capa.jpg', 'area-gourmet1.jpg', 'area-gourmet2.jpg'],
+    area: ['area-lazer-capa.jpg', 'area-lazer1.jpg', 'area-lazer2.jpg'],
     sacada: ['sacada-capa.jpg', 'sacada1.jpg', 'sacada2.jpg'],
     sala: ['sala-capa.jpg', 'sala1.jpg', 'sala2.jpg']
   }
