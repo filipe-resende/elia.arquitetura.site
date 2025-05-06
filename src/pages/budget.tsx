@@ -11,8 +11,6 @@ import React, { useState } from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
-import { enviarMensagem } from '../services/buget-sender'
-
 import Button from '@mui/material/Button'
 import CloudUploadIcon from '@mui/icons-material/CloudUpload'
 import DeleteIcon from '@mui/icons-material/Delete'
@@ -114,7 +112,6 @@ export default function Budget() {
     try {
       openModal() // Abre a modal de carregamento
       setIsSubmitting(true) // Define que o envio está em andamento
-      await enviarMensagem(formData)
       setIsSubmitting(false) // Define que o envio foi concluído
       closeModal() // Fecha a modal após o envio
       alert('Mensagem enviada com sucesso!')

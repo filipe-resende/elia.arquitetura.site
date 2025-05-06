@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Container, Image } from 'react-bootstrap'
 
-function Home() {
+function App() {
   const [isOpen, setIsOpen] = useState(true)
 
   const toggleNavbar = () => {
@@ -19,13 +19,25 @@ function Home() {
           <i className="fa fa-bars"></i>
         </div>
         <div className="phone-number">
-          <a href="https://api.whatsapp.com/send/?phone=553173422196&text&type=phone_number&app_absent=0">
+          <a
+            href="https://api.whatsapp.com/send/?phone=553173422196&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '8px',
+              textDecoration: 'none',
+              color: 'inherit'
+            }}
+          >
+            <span>+55 (31) 97342-2196</span>
             <i
               className="fa fa-whatsapp"
               style={{ fontSize: '22px', color: 'black' }}
             />
-          </a>{' '}
-          (31) 97342 2196
+          </a>
         </div>
         <nav
           className="nav-menu"
@@ -488,4 +500,4 @@ function Home() {
   )
 }
 
-export default Home
+export default App

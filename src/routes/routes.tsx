@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
-import Home from '../pages/home'
+import App from '../pages/home'
 import About from '../pages/about'
 import Budget from '../pages/budget'
 import Projects from '../pages/projects'
@@ -9,11 +9,11 @@ export const Routes = () =>
   useRoutes([
     {
       path: '/',
-      element: <Home />
+      element: <App />
     },
     {
       path: '/inicio',
-      element: <Home />
+      element: <App />
     },
     {
       path: '/sobre',
@@ -25,7 +25,7 @@ export const Routes = () =>
     },
     {
       path: '*',
-      element: <Home />
+      element: <App />
     },
     {
       path: '/projetos/:projeto',
