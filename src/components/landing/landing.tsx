@@ -22,7 +22,6 @@ export default function Landing() {
   }, [])
 
   const sendToWhatsApp = () => {
-    const formattedPhone = phone.replace(/\D/g, '')
     const message = `Olá! Me chamo ${name} e gostaria de solicitar um orçamento.`
     const url = `https://api.whatsapp.com/send?phone=553173422196&text=${encodeURIComponent(
       message
