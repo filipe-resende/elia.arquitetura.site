@@ -2,7 +2,6 @@ import React from 'react'
 import { Image } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
-import Sidebar from '../components/sidebar/sidebar'
 
 export default function About() {
   return (
