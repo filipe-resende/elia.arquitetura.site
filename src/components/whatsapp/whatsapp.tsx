@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './WhatsappButton.css'
+import './whatsapp.css'
 
 export function WhatsappButton() {
   const [showTooltip, setShowTooltip] = useState(true)

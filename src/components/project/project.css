@@ -1,0 +1,82 @@
+.masonry-grid {
+  column-count: 1;
+  column-gap: 16px;
+}
+
+@media (min-width: 576px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+.project-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 16px;
+  break-inside: avoid;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: #fff;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.3));
+  color: #ffffff;
+  z-index: 2;
+}
+
+.overlay h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.overlay p {
+  font-size: 0.9rem;
+  margin: 4px 0 0;
+  color: #f0f0f0;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}

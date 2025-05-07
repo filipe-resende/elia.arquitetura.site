@@ -7,7 +7,8 @@ import { Provider } from 'react-redux'
 import { store } from './assets/redux/store'
 import 'font-awesome/css/font-awesome.min.css'
 import '@mui/material'
-import { WhatsappButton } from './components/Whatsapp/WhatsappButton'
+import { WhatsappButton } from './components/whatsapp/whatsapp'
+import Landing from './components/landing/landing'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -15,8 +16,9 @@ root.render(
     <React.StrictMode>
       <Router>
         <Routes />
+        <Landing />
+        <WhatsappButton />
       </Router>
-      <WhatsappButton />
     </React.StrictMode>
   </Provider>
 )
