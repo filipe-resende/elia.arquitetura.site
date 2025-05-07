@@ -124,18 +124,7 @@ ol {
 	padding: 100px 0;
 }
 
-.section-title {
-	margin-bottom: 75px;
-}
 
-.section-title h1,
-.section-title h2 {
-	display: inline-block;
-	background: #baff00;
-	padding: 0 20px;
-	margin-bottom: 0;
-	font-size: 60px;
-}
 
 .set-bg {
 	background-size: cover;

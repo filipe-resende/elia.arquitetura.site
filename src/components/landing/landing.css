@@ -1,0 +1,142 @@
+.landing-orcamento {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  background: linear-gradient(135deg, #fef9f9, #fff8e7);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.orcamento-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .orcamento-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.orcamento-text {
+  flex: 1;
+  max-width: 400px;
+}
+
+.orcamento-text h1 {
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.orcamento-text p {
+  font-size: 1rem;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.orcamento-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.orcamento-form input {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.orcamento-button {
+  background-color: #0ea5e9;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.orcamento-button:hover {
+  background-color: #0369a1;
+  transform: scale(1.03);
+}
+
+.orcamento-button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.orcamento-masonry {
+  column-count: 2;
+  column-gap: 10px;
+  flex: 1;
+  max-width: 320px;
+}
+
+.orcamento-masonry img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: block;
+  break-inside: avoid;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.orcamento-masonry img:hover {
+  transform: scale(1.04);
+  opacity: 0.97;
+}
+
+.orcamento-close {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  font-size: 34px;
+  color: #dc2626;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.orcamento-close:hover {
+  color: #b91c1c;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.landing-orcamento {
+  animation: fade-in 0.4s ease-out;
+}

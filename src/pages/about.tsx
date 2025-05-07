@@ -1,37 +1,14 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+import Navbar from '../components/navbar/navbar'
+import Sidebar from '../components/sidebar/sidebar'
 
 export default function About() {
   return (
     <div className="about">
-      <header className="header-area">
-        <NavLink to="/inicio" className="logo-area">
-          <Image src="/img/logo.png" alt="" />
-        </NavLink>
-        <div className="nav-switch">
-          <i className="fa fa-bars"></i>
-        </div>
-        <div className="phone-number">
-          <a href="https://api.whatsapp.com/send/?phone=553173422196&text&type=phone_number&app_absent=0">
-            <i
-              className="fa fa-whatsapp"
-              style={{ fontSize: '22px', color: 'black' }}
-            />
-          </a>{' '}
-          (31) 97342 2196
-        </div>
-        <nav className="nav-menu">
-          <ul>
-            <li className="active">
-              <NavLink to="/sobre">Sobre nós</NavLink>
-            </li>
-            <li>
-              <NavLink to="/orcamento">Orçamento</NavLink>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Navbar />
+
       <section
         className="page-header-section"
         style={{

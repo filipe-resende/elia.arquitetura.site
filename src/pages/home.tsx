@@ -1,74 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { Container, Image } from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
+import Navbar from '../components/navbar/navbar'
+import Sidebar from '../components/sidebar/sidebar'
+import Project from '../components/project/project'
+import Experience from '../components/experience/experience'
 
-function App() {
-  const [isOpen, setIsOpen] = useState(true)
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen)
-  }
-
+function Home() {
   return (
     <div className="App">
-      <header className="header-area">
-        <NavLink to="/home" className="logo-area">
-          <Image src="/img/logo.png" alt="Elía Studio Arquitetura"></Image>
-        </NavLink>
-        <div className="nav-switch" onClick={toggleNavbar}>
-          <i className="fa fa-bars"></i>
-        </div>
-        <div className="phone-number">
-          <a
-            href="https://api.whatsapp.com/send/?phone=553173422196&text&type=phone_number&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
-              textDecoration: 'none',
-              color: 'inherit'
-            }}
-          >
-            <span>+55 (31) 97342-2196</span>
-            <i
-              className="fa fa-whatsapp"
-              style={{ fontSize: '22px', color: 'black' }}
-            />
-          </a>
-        </div>
-        <nav
-          className="nav-menu"
-          style={isOpen ? { display: 'block' } : { display: 'none' }}
-        >
-          <ul>
-            <li>
-              <NavLink to="/sobre">Sobre nós</NavLink>
-            </li>
-            <li>
-              <NavLink to="/orcamento">Orçamento</NavLink>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Navbar />
       <section className="hero-section">
-        <div className="left-bar">
-          <div className="left-bar-content">
-            <div className="social-links">
-              <a href="https://br.pinterest.com/studioeliarq/">
-                <i className="fa fa-pinterest"></i>
-              </a>
-              <a href="https://www.instagram.com/eliastudioarq/">
-                <i className="fa fa-instagram"></i>
-              </a>
-              <a href="https://www.facebook.com/eliastudioarq">
-                <i className="fa fa-facebook"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+        <Sidebar />
         <div
           className="hero-slider"
           style={{
@@ -92,6 +35,9 @@ function App() {
         </div>
         <div className="hero-right-text">Arquitetura e Interiores</div>
       </section>
+      <Experience />
+
+      <Project />
       <section className="intro-section pt100 pb50">
         <div className="container">
           <div className="row">
@@ -225,145 +171,6 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="projects" className="projects-section pb50">
-        <Container>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section-title">
-                <h1>Projetos</h1>
-              </div>
-              <div className="row">
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/loja`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/capa-loja.jpg"
-                        className="w-100 hover-effect"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Lojas C</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/escritorio`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/capa-escritorio.jpg"
-                        className="w-100 hover-effect"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Escritório J</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/area`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/area-lazer-capa.jpg"
-                        className="w-100 hover-effect"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Área de Convívio AD</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/estetica`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/estetica-capa.jpg"
-                        className="w-100 hover-effect"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Estúdio de Beleza F</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/gourmet`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/gourmet-capa.jpg"
-                        className="w-100 hover-effect"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Área Gourmet DW</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/cozinha`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/cozinha-capa.jpg"
-                        className="w-100 hover-effect"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Cozinha FF</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/lazer`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/area-gourmet-capa.jpg"
-                        className="w-100 hover-effect"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Area Gourmet FF</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/sacada`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/sacada-capa.jpg"
-                        className="w-100 hover-effect"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Sacada FF</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-                <div className="col-lg-4 mb-3 text-center">
-                  <NavLink to={`/projetos/sala`}>
-                    <div className="card border-0">
-                      <img
-                        src="/img/projetos/sala-capa.jpg"
-                        className="w-100"
-                      />
-                      <div className="card-body">
-                        <h5 className="mb-1">Sala AD</h5>
-                        <p className="small font-weight-thin">3 foto(s)</p>
-                      </div>
-                    </div>
-                  </NavLink>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
       <section className="cta-section pt100 pb50">
         <div className="cta-image-box"></div>
         <div className="container">
@@ -395,40 +202,6 @@ function App() {
                 <div className="cta-img-icon">
                   <Image src="/img/icon/color/3.png" alt=""></Image>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="milestones-section spad">
-        <div className="container">
-          <div className="row" style={{ justifyContent: 'center' }}>
-            <div className="col-lg-3 col-md-6">
-              <div className="milestone">
-                <h2>03</h2>
-                <p>
-                  Anos <br />
-                  Experiência
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="milestone">
-                <h2>41</h2>
-                <p>
-                  Projetos <br />
-                  Realizados
-                  <br />
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="milestone">
-                <h2>3k</h2>
-                <p>
-                  Seguidores <br />
-                  Instagram
-                </p>
               </div>
             </div>
           </div>
@@ -500,4 +273,4 @@ function App() {
   )
 }
 
-export default App
+export default Home
