@@ -45,37 +45,36 @@ export default function Landing() {
           <h1>Vamos criar algo incrível juntos?</h1>
           <p> Seu sonho merece sair do papel com carinho e personalidade.</p>
           <p>Faça seu orçamento:</p>
-          <div className="orcamento-form">
-            <button className="orcamento-button" onClick={sendToWhatsApp}>
-              Entre em contato no WhatsApp
-            </button>
-          </div>
         </div>
-
-        <div className="orcamento-masonry">
-          <div className="orcamento-masonry-grid">
-            {Object.values(chaveValor)
-              .flat()
-              .map((filename, index) => (
-                <img
-                  className="orcamento-image"
-                  key={index}
-                  src={`${path}${filename}`}
-                  alt={`Projeto ${index + 1}`}
-                />
-              ))}
-          </div>
-          <div className="orcamento-instagram">
-            <a
-              href="https://www.instagram.com/eliastudioarq"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="orcamento-instagram-button"
-            >
-              <i className="fa fa-instagram"></i>
-              Ver mais no Instagram
-            </a>
-          </div>
+        <div className="orcamento-form">
+          <button className="orcamento-button" onClick={sendToWhatsApp}>
+            Entre em contato no WhatsApp
+          </button>
+        </div>
+      </div>
+      <div className="orcamento-masonry">
+        <div className="orcamento-masonry-grid">
+          {Object.values(chaveValor)
+            .flat()
+            .map((filename, index) => (
+              <img
+                className="orcamento-image"
+                key={index}
+                src={`${path}${filename}`}
+                alt={`Projeto ${index + 1}`}
+              />
+            ))}
+        </div>
+        <div className="orcamento-instagram">
+          <a
+            href="https://www.instagram.com/eliastudioarq"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="orcamento-instagram-button"
+          >
+            <i className="fa fa-instagram"></i>
+            Ver mais no Instagram
+          </a>
         </div>
       </div>
     </section>
