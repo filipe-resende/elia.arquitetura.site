@@ -2,15 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './landing.css'
 
 export default function Landing() {
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
   const [visible, setVisible] = useState(true)
 
   const path = '/img/projetos/'
 
   const chaveValor = {
-    loja: ['capa-loja.jpg', 'estetica-capa.jpg'],
-    escritorio: ['capa-escritorio.jpg']
+    loja: ['area-gourmet1.jpg', 'cozinha-capa.jpg', 'loja1.jpg'],
+    escritorio: ['estetica2.jpg']
   }
 
   useEffect(() => {
@@ -22,10 +20,7 @@ export default function Landing() {
   }, [])
 
   const sendToWhatsApp = () => {
-    const message = `Olá! Me chamo ${name} e gostaria de solicitar um orçamento.`
-    const url = `https://api.whatsapp.com/send?phone=553173422196&text=${encodeURIComponent(
-      message
-    )}`
+    const url = `https://api.whatsapp.com/send?phone=553173422196`
     window.open(url, '_blank')
   }
 
@@ -33,56 +28,54 @@ export default function Landing() {
 
   return (
     <section className="landing-orcamento">
+      <img></img>
       <button className="orcamento-close" onClick={() => setVisible(false)}>
         ×
       </button>
 
       <div className="orcamento-content">
         <div className="orcamento-text">
-          <h1>
-            Vamos criar algo incrível juntos? Seu sonho merece sair do papel com
-            carinho e personalidade.
-          </h1>
-          <p>
-            Solicite seu orçamento personalizado agora mesmo e receba
-            atendimento pelo WhatsApp.
-          </p>
-
+          <div className="orcamento-div-logo">
+            <img
+              className="orcamento-logo"
+              src="/img/logo_oficial.png"
+              alt="Logo Eliá Studio Arq"
+            />
+          </div>
+          <h1>Vamos criar algo incrível juntos?</h1>
+          <p> Seu sonho merece sair do papel com carinho e personalidade.</p>
+          <p>Faça seu orçamento:</p>
           <div className="orcamento-form">
-            <input
-              type="text"
-              placeholder="Seu nome"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              required
-            />
-            <input
-              type="tel"
-              placeholder="Seu telefone"
-              value={phone}
-              onChange={e => setPhone(e.target.value)}
-              required
-            />
-            <button
-              className="orcamento-button"
-              onClick={sendToWhatsApp}
-              disabled={!name || !phone}
-            >
-              Enviar para WhatsApp
+            <button className="orcamento-button" onClick={sendToWhatsApp}>
+              Entre em contato no WhatsApp
             </button>
           </div>
         </div>
 
         <div className="orcamento-masonry">
-          {Object.values(chaveValor)
-            .flat()
-            .map((filename, index) => (
-              <img
-                key={index}
-                src={`${path}${filename}`}
-                alt={`Projeto ${index + 1}`}
-              />
-            ))}
+          <div className="orcamento-masonry-grid">
+            {Object.values(chaveValor)
+              .flat()
+              .map((filename, index) => (
+                <img
+                  className="orcamento-image"
+                  key={index}
+                  src={`${path}${filename}`}
+                  alt={`Projeto ${index + 1}`}
+                />
+              ))}
+          </div>
+          <div className="orcamento-instagram">
+            <a
+              href="https://www.instagram.com/eliastudioarq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="orcamento-instagram-button"
+            >
+              <i className="fa fa-instagram"></i>
+              Ver mais no Instagram
+            </a>
+          </div>
         </div>
       </div>
     </section>

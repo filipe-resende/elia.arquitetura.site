@@ -7,7 +7,7 @@ export default function Experience() {
         <div className="row" style={{ justifyContent: 'center' }}>
           <div className="col-lg-3 col-md-6">
             <div className="milestone">
-              <h2>04</h2>
+              <h2>05</h2>
               <p>
                 Anos <br />
                 Experiência
