@@ -25,7 +25,7 @@ export default function Project() {
       <Container>
         <div className="section-title text-center mb-5">
           <h1 className="display-5">
-            <span>Projetos</span>
+            <span>Portfólio</span>
             <h2 className="text-2xl font-semibold mb-2">
               <p className="text-muted-foreground text-center">
                 Alguns dos nossos projetos que transformaram ideias em espaços

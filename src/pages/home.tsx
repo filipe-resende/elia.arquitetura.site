@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Image } from 'react-bootstrap'
 import Navbar from '../components/navbar/navbar'
@@ -6,53 +6,344 @@ import Sidebar from '../components/sidebar/sidebar'
 import Project from '../components/project/project'
 import Experience from '../components/experience/experience'
 
+const WA_LINK =
+  'https://api.whatsapp.com/send/?phone=553173422196&text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento.&type=phone_number&app_absent=0'
+
+const faqs = [
+  {
+    q: 'Quanto custa um projeto?',
+    a: 'Depende do tamanho e da complexidade. Fazemos um orçamento personalizado sem compromisso.'
+  },
+  {
+    q: 'Preciso ter tudo definido antes?',
+    a: 'Não. Ajudamos você a organizar suas ideias desde o início, sem precisar chegar com tudo resolvido.'
+  },
+  {
+    q: 'Vocês acompanham a obra?',
+    a: 'Sim, podemos orientar e acompanhar a execução conforme a sua necessidade.'
+  },
+  {
+    q: 'O atendimento é rápido?',
+    a: 'Sim, respondemos o mais rápido possível pelo WhatsApp e mantemos comunicação clara durante todo o processo.'
+  },
+  {
+    q: 'Atendem apenas Belo Horizonte?',
+    a: 'Atendemos BH e região, além de aceitar projetos remotos para outras localidades.'
+  }
+]
+
 function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+
   return (
     <div className="App">
       <Navbar />
+
+      {/* ── 1. Hero ──────────────────────────────────────────── */}
       <section className="hero-section">
         <Sidebar />
         <div
           className="hero-slider"
-          style={{
-            backgroundImage: `url(/img/bg.jpg)`
-          }}
+          style={{ backgroundImage: `url(/img/bg.jpg)` }}
         >
           <div className="hero-slide-item">
             <div className="slide-inner">
               <div className="slide-content">
-                <h2>
-                  Arquitetura <br />
-                  Acessível
-                  <br /> e descomplicada
+                <p className="hero-eyebrow">
+                  Arquitetura residencial pensada para o seu estilo de vida
+                </p>
+                <h2 className="hero-title">
+                  Transforme sua casa em um espaço sofisticado, funcional e
+                  feito para viver bem
                 </h2>
-                <a href="#projects" className="site-btn sb-light">
-                  Veja nossos projetos.
+                <ul className="hero-bullets">
+                  <li>
+                    ✔ Projetos personalizados que refletem sua identidade
+                  </li>
+                  <li>
+                    ✔ Acompanhamento próximo, com atenção em cada detalhe
+                  </li>
+                  <li>
+                    ✔ Soluções inteligentes que equilibram estética e custo
+                  </li>
+                  <li>✔ Valorização real do seu imóvel</li>
+                </ul>
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="site-btn sb-light"
+                >
+                  Solicitar orçamento agora
                 </a>
+                <p className="hero-friction">
+                  Atendimento rápido, sem compromisso e sem pressão
+                </p>
+                <p className="hero-social-proof">
+                  Mais de 60 projetos desenvolvidos com clientes satisfeitos
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div className="hero-right-text">Arquitetura e Interiores</div>
       </section>
+
+      {/* ── 2. Leads ─────────────────────────────────────────── */}
+      <section className="lp-leads spad">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6 mb-5 mb-lg-0">
+              <p className="lp-tag">Para você que...</p>
+              <h2 className="lp-leads-pain">
+                Está cansado de ver sua casa sem personalidade ou não sabe por
+                onde começar uma reforma?
+              </h2>
+              <p className="lp-leads-solution">
+                A Eliá Arquitetura transforma ideias em projetos claros,
+                funcionais e viáveis sem complicação.
+              </p>
+            </div>
+            <div className="col-lg-6">
+              <div className="lp-usps">
+                <div className="lp-usp-item">
+                  <div>
+                    <strong>Atendimento próximo e humanizado</strong>
+                    <p>Você nunca se sentirá perdido no processo</p>
+                  </div>
+                </div>
+                <div className="lp-usp-item">
+                  <div>
+                    <strong>Portfólio com projetos reais executados</strong>
+                    <p>Resultados concretos, não apenas renderizações</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. Métricas ──────────────────────────────────────── */}
       <Experience />
 
+      {/* ── 4. Projetos ──────────────────────────────────────── */}
       <Project />
-      <section className="intro-section pt100 pb50">
+
+      {/* ── 5. Depoimentos ───────────────────────────────────── */}
+      <section className="lp-testimonials spad">
         <div className="container">
+          <div className="lp-section-title text-center">
+            <h2>O que nossos clientes dizem</h2>
+          </div>
           <div className="row">
-            <div className="col-lg-7 intro-text mb-5 mb-lg-0">
+            {[
+              {
+                text: 'Ficamos impressionados com o cuidado em cada detalhe.',
+                name: 'Mariana S.'
+              },
+              {
+                text: 'Conseguiram transformar completamente nosso espaço sem estourar o orçamento.',
+                name: 'Carlos R.'
+              },
+              {
+                text: 'Atendimento extremamente paciente e profissional.',
+                name: 'Juliana M.'
+              },
+              {
+                text: 'Nos sentimos seguros durante todo o processo.',
+                name: 'Felipe T.'
+              }
+            ].map((t, i) => (
+              <div key={i} className="col-md-6 mb-4">
+                <div className="lp-testimonial-card">
+                  <p className="lp-testimonial-text">&ldquo;{t.text}&rdquo;</p>
+                  <p className="lp-testimonial-author">— {t.name}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="row lp-authority-row mt-4">
+            {[
+              'Projetos residenciais executados em diferentes perfis',
+              'Clientes atendidos em Belo Horizonte e região',
+              'Portfólio com soluções modernas e funcionais'
+            ].map((badge, i) => (
+              <div key={i} className="col-md-4 mb-3">
+                <div className="lp-authority-badge">✔ {badge}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. Benefícios ────────────────────────────────────── */}
+      <section className="lp-benefits spad">
+        <div className="container">
+          <div className="lp-section-title lp-title-light">
+            <h2>
+              Mais conforto, mais estética, mais{' '}
+              <span className="lp-accent">valor</span> para seu imóvel
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 7. Diferenciais ──────────────────────────────────── */}
+      <section className="lp-diff spad">
+        <div className="container">
+          <div className="lp-section-title text-center">
+            <h2>
+              Por que escolher a{' '}
+              <span className="lp-accent-dark">Eliá Arquitetura</span>?
+            </h2>
+          </div>
+          <div className="row">
+            <div className="col-lg-6 mb-5 mb-lg-0">
+              <ul className="lp-diff-list">
+                {[
+                  'Atendimento paciente e sem pressa',
+                  'Explicação clara em todas as etapas',
+                  'Projetos adaptados à sua realidade financeira',
+                  'Foco total em funcionalidade + estética',
+                  'Transparência do início ao fim',
+                  'Experiência com projetos residenciais reais',
+                  'Suporte durante todo o processo'
+                ].map((d, i) => (
+                  <li key={i} className="lp-diff-item">
+                    ✔ {d}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="col-lg-6">
+              <div className="lp-compare-table">
+                <div className="lp-compare-header">
+                  <div className="lp-compare-col lp-col-elia">
+                    Eliá Arquitetura
+                  </div>
+                  <div className="lp-compare-col lp-col-others">
+                    Outros Escritórios
+                  </div>
+                </div>
+                {[
+                  ['Atendimento próximo', 'Atendimento impessoal'],
+                  ['Projeto adaptado ao orçamento', 'Projetos genéricos'],
+                  ['Explicação clara', 'Comunicação confusa'],
+                  ['Foco no cliente', 'Foco apenas no design']
+                ].map(([elia, others], i) => (
+                  <div key={i} className="lp-compare-row">
+                    <div className="lp-compare-col lp-col-elia">✔ {elia}</div>
+                    <div className="lp-compare-col lp-col-others">
+                      ✗ {others}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. Como Funciona ─────────────────────────────────── */}
+      <section className="lp-how spad">
+        <div className="container">
+          <div className="lp-section-title lp-title-light text-center">
+            <h2>Simples, claro e sem complicação</h2>
+          </div>
+          <div className="row justify-content-center">
+            {[
+              {
+                n: '01',
+                title: 'Entre em contato',
+                desc: 'Explique sua ideia em poucos minutos'
+              },
+              {
+                n: '02',
+                title: 'Alinhamento inicial',
+                desc: 'Receba orientação e alinhamento de expectativas'
+              },
+              {
+                n: '03',
+                title: 'Projeto personalizado',
+                desc: 'Desenvolvemos seu projeto sob medida'
+              },
+              {
+                n: '04',
+                title: 'Acompanhamento claro',
+                desc: 'Você acompanha tudo com clareza e segurança'
+              },
+              {
+                n: '05',
+                title: 'Inicie com confiança',
+                desc: 'Comece sua obra com mais previsibilidade'
+              }
+            ].map((step, i) => (
+              <div key={i} className="col-lg-2 col-md-4 col-6 mb-4">
+                <div className="lp-step-card">
+                  <div className="lp-step-number">{step.n}</div>
+                  <h4 className="lp-step-title">{step.title}</h4>
+                  <p className="lp-step-desc">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 9. Oferta ────────────────────────────────────────── */}
+      <section className="lp-offer spad">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
               <h2 className="sp-title">
-                Somos um <span>espaço</span> de arquitetura criativa
+                Solicite seu <span>projeto arquitetônico</span>
+              </h2>
+              <ul className="lp-offer-bullets">
+                <li>✔ Projetos residenciais personalizados</li>
+                <li>✔ Soluções inteligentes para diferentes orçamentos</li>
+                <li>✔ Atendimento próximo e humanizado</li>
+                <li>✔ Clareza em todas as etapas</li>
+              </ul>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-btn sb-solid-dark"
+              >
+                Falar no WhatsApp agora
+              </a>
+              <p className="lp-friction-dark">
+                Sem compromisso e com resposta rápida
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 10. Sobre a Equipe ───────────────────────────────── */}
+      <section className="lp-about spad">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-5 mb-5 mb-lg-0">
+              <Image
+                src="/img/intro.png"
+                alt="Arq. Elis Araujo"
+                className="lp-about-img"
+              />
+            </div>
+            <div className="col-lg-7">
+              <p className="lp-tag">Quem está por trás do seu projeto</p>
+              <h2 className="sp-title">
+                A arquiteta que cuida do seu projeto como se fosse o{' '}
+                <span>dela</span>
               </h2>
               <p>
-                A <strong>Eliá Studio Arquitetura</strong> se dedica a criar
-                projetos com foco na melhoria da qualidade de vida através de
-                soluções únicas que proporcionam conforto, segurança, bem-estar,
-                tudo isso aliado a criatividade, agilidade e assertividade.
-                Estamos aqui para tornar realidade o seu sonho de forma que se
-                adapte perfeitamente ao seu orçamento. Estamos à disposição para
-                auxiliá-lo na concretização do seu projeto.
+                A Eliá Arquitetura é liderada por{' '}
+                <strong>Arq. Elis Araujo</strong>, com foco em criar espaços que
+                unem estética, funcionalidade e bem-estar. Cada projeto é
+                desenvolvido com atenção aos detalhes, respeitando o estilo de
+                vida e o orçamento de cada cliente.
               </p>
               <NavLink to="/sobre">
                 <a href="#" className="site-btn sb-dark">
@@ -60,163 +351,131 @@ function Home() {
                 </a>
               </NavLink>
             </div>
-            <div className="col-lg-5 pt-4">
-              <Image src="/img/intro.png" alt=""></Image>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 11. Arquétipos ───────────────────────────────────── */}
+      <section className="lp-archetypes spad">
+        <div className="container">
+          <div className="lp-section-title lp-title-light text-center">
+            <h2>Para quem nossos projetos são ideais</h2>
+          </div>
+          <div className="row">
+            {[
+              {
+                emoji: '🏡',
+                type: 'Casais planejando seu lar',
+                quote: 'Conseguimos finalmente ter uma casa com a nossa cara.'
+              },
+              {
+                emoji: '🔨',
+                type: 'Pessoas reformando sem saber por onde começar',
+                quote: 'Tivemos direção clara e evitamos muitos erros.'
+              },
+              {
+                emoji: '💼',
+                type: 'Clientes que querem valorizar o imóvel',
+                quote: 'O investimento valeu muito a pena.'
+              }
+            ].map((a, i) => (
+              <div key={i} className="col-md-4 mb-4">
+                <div className="lp-archetype-card">
+                  <div className="lp-archetype-emoji">{a.emoji}</div>
+                  <h4 className="lp-archetype-type">{a.type}</h4>
+                  <p className="lp-archetype-quote">&ldquo;{a.quote}&rdquo;</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 12. FAQ ──────────────────────────────────────────── */}
+      <section className="lp-faq spad">
+        <div className="container">
+          <div className="lp-section-title text-center">
+            <h2>Dúvidas comuns</h2>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              {faqs.map((faq, i) => (
+                <div
+                  key={i}
+                  className={`lp-faq-item${openFaq === i ? ' open' : ''}`}
+                >
+                  <button
+                    className="lp-faq-question"
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  >
+                    {faq.q}
+                    <span className="lp-faq-toggle">
+                      {openFaq === i ? '−' : '+'}
+                    </span>
+                  </button>
+                  {openFaq === i && (
+                    <div className="lp-faq-answer">
+                      <p>{faq.a}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
-      <section className="service-section spad">
+
+      {/* ── 13. CTA Final ────────────────────────────────────── */}
+      <section className="lp-final-cta spad">
         <div className="container">
-          <div className="section-title">
-            <h2>Serviços</h2>
-          </div>
-          <div className="row">
-            <div className="col-lg-4 col-md-6">
-              <div className="service-box">
-                <div className="sb-icon">
-                  <div className="sb-img-icon">
-                    <Image src="/img/icon/dark/1.png" alt=""></Image>
-                  </div>
-                </div>
-                <h3>Projeto arquitetônico</h3>
-                <p>
-                  Realizamos o projeto de elaboração do imóvel para construção.
-                  Pode ser <strong>residencial</strong> ou{' '}
-                  <strong>comercial</strong>. Nele são representados elementos
-                  construtivos, instalações sanitárias, aberturas e volumetria.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-box">
-                <div className="sb-icon">
-                  <div className="sb-img-icon">
-                    <Image src="/img/icon/dark/2.png" alt=""></Image>
-                  </div>
-                </div>
-                <h3>Projeto de interiores</h3>
-                <p>
-                  Projeto minucioso para a <strong>parte interna</strong>{' '}
-                  envolve desenho técnico com informações: acabamentos,
-                  decoração, layout, indicação de pontos elétricos, luminotecnia
-                  e detalhamento de soluções.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-box">
-                <div className="sb-icon">
-                  <div className="sb-img-icon">
-                    <Image src="/img/icon/dark/3.png" alt=""></Image>
-                  </div>
-                </div>
-                <h3>Consultoria de arquitetura</h3>
-                <p>
-                  Com <strong>poucas mudanças</strong>, atenderá o resultado!
-                  Inclui reorganização de espaço, móveis e mudança de cores.
-                  Avaliaremos se a situação é uma consultoria ou um Projeto,
-                  dependendo dos itens solicitados.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-box">
-                <div className="sb-icon">
-                  <div className="sb-img-icon">
-                    <Image src="/img/icon/dark/4.png" alt=""></Image>
-                  </div>
-                </div>
-                <h3>Alvará sanitário</h3>
-                <p>
-                  Elaboramos o projeto arquitetônico de acordo com a{' '}
-                  <strong>legislação</strong> RDC e todas as resoluções
-                  posteriores, além de garantir que as necessidades, fluxos e
-                  acessibilidade sejam atendidas.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-box">
-                <div className="sb-icon">
-                  <div className="sb-img-icon">
-                    <Image src="/img/icon/dark/5.png" alt=""></Image>
-                  </div>
-                </div>
-                <h3>Regularização</h3>
-                <p>
-                  Alguns projetos precisam ser regularizados junto a prefeitura
-                  da cidade. Fazemos a regularização dos nossos projetos (sendo
-                  construções do zero ou reforma).{' '}
-                  <strong>Dentro do seu orçamento!</strong>
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-box">
-                <div className="sb-icon">
-                  <div className="sb-img-icon">
-                    <Image src="/img/icon/dark/6.png" alt=""></Image>
-                  </div>
-                </div>
-                <h3>Parcelamento do solo</h3>
-                <p>
-                  Elaboramos os projeto e materiais urbanísticos, R.T e fazemos
-                  todo a protocolização dos documentos exigidos&nbsp;
-                  <strong>especificamente</strong>&nbsp; para o caso. Aplicável
-                  na modalidade modificação de parcelamento.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="cta-section pt100 pb50">
-        <div className="cta-image-box"></div>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-7 pl-lg-0 offset-lg-5 cta-content">
-              <h2 className="sp-title">
-                <span>Faça um orçamento com a gente!</span>
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
+              <h2 className="lp-final-cta-title">
+                Pronto para transformar seu espaço?
               </h2>
-              <p>
-                Ficamos felizes em tê-lo por aqui! Compartilhe um pouco sobre o
-                que você precisa. É rápido, prometo! A gente quer ouvir a sua
-                história e poder tirar os seus planos do papel. Conte com a Eliá
-                para promover soluções verdadeiras e funcionais para seu dia a
-                dia. Após o preenchimento nossa equipe entrará em contato com um
-                orçamento feito especialmente para você.{' '}
-              </p>
-              <div className="cta-img-icon">
-                <NavLink to={'/orcamento'} className="site-btn sb-light">
-                  Faça seu orçamento
-                </NavLink>
-              </div>
-              <div className="cta-icons">
-                <div className="cta-img-icon">
-                  <Image src="/img/icon/light/1.png" alt=""></Image>
-                </div>
-                <div className="cta-img-icon">
-                  <Image src="/img/icon/light/2.png" alt=""></Image>
-                </div>
-                <div className="cta-img-icon">
-                  <Image src="/img/icon/color/3.png" alt=""></Image>
-                </div>
-              </div>
+              <ul className="lp-final-bullets">
+                <li>✔ Projeto personalizado para seu estilo de vida</li>
+                <li>✔ Atendimento próximo e sem complicação</li>
+                <li>✔ Soluções alinhadas ao seu orçamento</li>
+                <li>✔ Mais segurança para sua obra</li>
+              </ul>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-btn sb-light"
+              >
+                Solicitar orçamento agora
+              </a>
+              <p className="lp-final-friction">Sem risco, sem compromisso</p>
             </div>
           </div>
         </div>
       </section>
+
+      {/* ── Footer ───────────────────────────────────────────── */}
       <footer className="footer-section">
         <div className="footer-social">
           <div className="social-links">
-            <a href="https://br.pinterest.com/studioeliarq/">
+            <a
+              href="https://br.pinterest.com/studioeliarq/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa fa-pinterest"></i>
             </a>
-            <a href="https://www.instagram.com/eliastudioarq/">
+            <a
+              href="https://www.instagram.com/eliastudioarq/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/eliastudioarq">
+            <a
+              href="https://www.facebook.com/eliastudioarq"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa fa-facebook"></i>
             </a>
           </div>
@@ -229,31 +488,13 @@ function Home() {
                   <div className="footer-item">
                     <ul>
                       <li>
-                        <NavLink to="/">
-                          {' '}
-                          <a href="#">Início</a>
-                        </NavLink>
+                        <NavLink to="/">Início</NavLink>
                       </li>
                       <li>
-                        <NavLink to="/sobre">
-                          {' '}
-                          <a href="#">Sobre nós</a>
-                        </NavLink>
+                        <NavLink to="/sobre">Sobre nós</NavLink>
                       </li>
                       <li>
-                        <NavLink to="/orcamento">
-                          {' '}
-                          <a href="#">Orçamento</a>
-                        </NavLink>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="footer-item">
-                    <ul>
-                      <li>
-                        <a href="#">Terms & Conditions</a>
+                        <NavLink to="/orcamento">Orçamento</NavLink>
                       </li>
                     </ul>
                   </div>
@@ -262,11 +503,9 @@ function Home() {
             </div>
           </div>
         </div>
-
         <div className="copyright">
-          Copyright &copy;{' '}
-          <script>document.write(new Date().getFullYear());</script> All rights
-          reserved. <br />
+          Copyright &copy; {new Date().getFullYear()} Eliá Arquitetura. Todos os
+          direitos reservados.
         </div>
       </footer>
     </div>

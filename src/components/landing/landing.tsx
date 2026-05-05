@@ -27,56 +27,55 @@ export default function Landing() {
   if (!visible) return null
 
   return (
-    <section className="landing-orcamento">
-      <img></img>
-      <button className="orcamento-close" onClick={() => setVisible(false)}>
-        ×
-      </button>
+    <>
+      <div className="landing-backdrop" onClick={() => setVisible(false)} />
+      <section className="landing-orcamento">
+        <button className="orcamento-close" onClick={() => setVisible(false)}>
+          ×
+        </button>
 
-      <div className="orcamento-content">
-        <div className="orcamento-text">
-          <div className="orcamento-div-logo">
-            <img
-              className="orcamento-logo"
-              src="/img/logo_oficial.png"
-              alt="Logo Eliá Studio Arq"
-            />
+        <div className="orcamento-content">
+          <div className="orcamento-text">
+            <div className="orcamento-div-logo">
+              <p className="orcamento-logo-title">Elia Arquitetura</p>
+              <p className="orcamento-logo-subtitle">Arq. Elis Regina</p>
+            </div>
+            <h1>Vamos criar algo incrível juntos?</h1>
+            <p> Seu sonho merece sair do papel com carinho e personalidade.</p>
+            <p>Faça seu orçamento:</p>
           </div>
-          <h1>Vamos criar algo incrível juntos?</h1>
-          <p> Seu sonho merece sair do papel com carinho e personalidade.</p>
-          <p>Faça seu orçamento:</p>
+          <div className="orcamento-form">
+            <button className="orcamento-button" onClick={sendToWhatsApp}>
+              Entre em contato no WhatsApp
+            </button>
+          </div>
         </div>
-        <div className="orcamento-form">
-          <button className="orcamento-button" onClick={sendToWhatsApp}>
-            Entre em contato no WhatsApp
-          </button>
+        <div className="orcamento-masonry">
+          <div className="orcamento-masonry-grid">
+            {Object.values(chaveValor)
+              .flat()
+              .map((filename, index) => (
+                <img
+                  className="orcamento-image"
+                  key={index}
+                  src={`${path}${filename}`}
+                  alt={`Projeto ${index + 1}`}
+                />
+              ))}
+          </div>
+          <div className="orcamento-instagram">
+            <a
+              href="https://www.instagram.com/eliastudioarq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="orcamento-instagram-button"
+            >
+              <i className="fa fa-instagram"></i>
+              Ver mais no Instagram
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="orcamento-masonry">
-        <div className="orcamento-masonry-grid">
-          {Object.values(chaveValor)
-            .flat()
-            .map((filename, index) => (
-              <img
-                className="orcamento-image"
-                key={index}
-                src={`${path}${filename}`}
-                alt={`Projeto ${index + 1}`}
-              />
-            ))}
-        </div>
-        <div className="orcamento-instagram">
-          <a
-            href="https://www.instagram.com/eliastudioarq"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="orcamento-instagram-button"
-          >
-            <i className="fa fa-instagram"></i>
-            Ver mais no Instagram
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

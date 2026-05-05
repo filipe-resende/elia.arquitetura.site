@@ -1,78 +1,132 @@
-import React, { useState } from 'react'
-import { Image } from 'react-bootstrap'
+import React, { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
+import './navbar.css'
+
+const WA_LINK =
+  'https://api.whatsapp.com/send/?phone=553173422196&text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento.&type=phone_number&app_absent=0'
+
+const navItems = [
+  {
+    label: 'Portfólio',
+    to: '/portfolio',
+    icon: 'fa-th-large',
+    external: false
+  },
+  {
+    label: 'Arquiteta',
+    to: '/arquiteta',
+    icon: 'fa-user',
+    external: false
+  },
+  {
+    label: 'Sobre nós',
+    to: '/sobre',
+    icon: 'fa-info-circle',
+    external: false
+  },
+  {
+    label: 'Orçamento',
+    to: WA_LINK,
+    icon: 'fa-whatsapp',
+    external: true
+  }
+]
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(true)
+  const [open, setOpen] = useState(false)
+  const panelRef = useRef<HTMLElement>(null)
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen)
-  }
+  useEffect(() => {
+    function handleOutside(e: MouseEvent) {
+      if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    if (open) document.addEventListener('mousedown', handleOutside)
+    return () => document.removeEventListener('mousedown', handleOutside)
+  }, [open])
+
+  const close = () => setOpen(false)
 
   return (
-    <header className="header-area">
-      <NavLink to="/home" className="logo-area">
-        <Image src="/img/logo.png" alt="Elía Studio Arquitetura"></Image>
-      </NavLink>
-      <div className="nav-switch" onClick={toggleNavbar}>
-        <i className="fa fa-bars"></i>
-      </div>
-      <div className="phone-number">
+    <header className="header-area" ref={panelRef}>
+      <button
+        className={`mobile-nav-toggle${open ? ' is-open' : ''}`}
+        onClick={() => setOpen(o => !o)}
+        aria-label={open ? 'Fechar menu' : 'Abrir menu'}
+      >
+        <span className="hamburger-bar" />
+        <span className="hamburger-bar" />
+        <span className="hamburger-bar" />
+      </button>
+
+      <div className="contact-card">
+        <a href="mailto:eliastudioarq@gmail.com" className="contact-card-item">
+          <i className="fa fa-envelope" />
+          <span>eliastudioarq@gmail.com</span>
+        </a>
         <a
-          href="https://api.whatsapp.com/send/?phone=553173422196&text&type=phone_number&app_absent=0"
+          href={WA_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            textDecoration: 'none',
-            color: 'inherit'
-          }}
+          className="contact-card-item"
         >
-          <span
-            style={{
-              display: 'flex',
-              gap: '8px'
-            }}
-          >
-            +55 (31) 97342-2196
-            <i
-              className="fa fa-whatsapp"
-              style={{ fontSize: '22px', color: 'black' }}
-            />
-          </span>
+          <i className="fa fa-whatsapp" style={{ color: '#25D366' }} />
+          <span>+55 (31) 97342-2196</span>
+        </a>
+        <a
+          href="https://www.instagram.com/eliastudioarq/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-card-item"
+        >
+          <i className="fa fa-instagram" style={{ color: '#E1306C' }} />
+          <span>@eliastudioarq</span>
         </a>
       </div>
-      <nav
-        className="nav-menu"
-        style={isOpen ? { display: 'block' } : { display: 'none' }}
-      >
-        <ul>
-          <li>
-            <NavLink to="/sobre">Sobre nós</NavLink>
-          </li>
 
-          <li>
+      {/* Backdrop */}
+      {open && <div className="mobile-nav-backdrop" onClick={close} />}
+
+      {/* Painel lateral direito */}
+      <nav className={`mobile-nav${open ? ' mobile-nav--open' : ''}`}>
+        <div className="mobile-nav-header">
+          <span className="mobile-nav-brand">Eliá Arquitetura</span>
+          <button
+            className="mobile-nav-close"
+            onClick={close}
+            aria-label="Fechar"
+          >
+            <i className="fa fa-times" />
+          </button>
+        </div>
+        {navItems.map((item, i) =>
+          item.external ? (
             <a
-              href="https://api.whatsapp.com/send?phone=553173422196&text=Olá! Gostaria de solicitar um orçamento personalizado."
+              key={i}
+              href={item.to}
               target="_blank"
               rel="noopener noreferrer"
+              className="mobile-nav-item"
+              style={{ transitionDelay: open ? `${i * 55}ms` : '0ms' }}
+              onClick={close}
             >
-              Faça um orçamento
+              <i className={`fa ${item.icon}`} />
+              {item.label}
             </a>
-          </li>
-          <li>
-            <a
-              href="https://api.whatsapp.com/send?phone=553173422196&text=Olá! Gostaria de solicitar um orçamento personalizado."
-              target="_blank"
-              rel="noopener noreferrer"
+          ) : (
+            <NavLink
+              key={i}
+              to={item.to}
+              className="mobile-nav-item"
+              style={{ transitionDelay: open ? `${i * 55}ms` : '0ms' }}
+              onClick={close}
             >
-              Fale conosco
-            </a>
-          </li>
-        </ul>
+              <i className={`fa ${item.icon}`} />
+              {item.label}
+            </NavLink>
+          )
+        )}
       </nav>
     </header>
   )

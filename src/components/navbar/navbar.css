@@ -1,0 +1,277 @@
+.logo-area {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.logo-text-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.logo-text-name {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+}
+
+.logo-text-sub {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 400;
+  color: #baff00;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* ── Contact card ──────────────────────────────────────────── */
+.contact-card {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 12px 18px;
+  background: rgba(18, 18, 18, 0.52);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  margin-top: 18px;
+  margin-right: 50px;
+}
+
+.contact-card-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: color 0.3s;
+}
+
+.contact-card-item i {
+  font-size: 15px;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contact-card-item .fa-envelope {
+  color: #baff00;
+}
+
+.contact-card-item:hover {
+  color: #fff;
+}
+
+/* ── Hamburger toggle ──────────────────────────────────────── */
+.mobile-nav-toggle {
+  display: none;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.mobile-nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hamburger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  transform-origin: center;
+}
+
+.mobile-nav-toggle.is-open .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-nav-toggle.is-open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.mobile-nav-toggle.is-open .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Backdrop ──────────────────────────────────────────────── */
+.mobile-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 999;
+}
+
+/* ── Painel lateral (slide da direita) ─────────────────────── */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background: #111;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.mobile-nav--open {
+  transform: translateX(0);
+}
+
+/* ── Cabeçalho do painel ───────────────────────────────────── */
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.mobile-nav-brand {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.mobile-nav-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobile-nav-close:hover {
+  background: rgba(220, 38, 38, 0.4);
+  color: #fff;
+}
+
+/* ── Itens de navegação ────────────────────────────────────── */
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  transform: translateX(16px);
+  transition: opacity 0.25s ease, transform 0.25s ease, color 0.2s, background 0.2s;
+}
+
+.mobile-nav--open .mobile-nav-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobile-nav-item i {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  color: #baff00;
+  flex-shrink: 0;
+}
+
+.mobile-nav-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item.active {
+  color: #baff00;
+  background: rgba(186, 255, 0, 0.05);
+}
+
+/* ── Visível apenas em mobile ──────────────────────────────── */
+@media only screen and (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .header-area {
+    min-height: 60px;
+  }
+
+  .contact-card {
+    margin-right: 68px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .contact-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    margin-right: 64px;
+    margin-top: 10px;
+  }
+
+  .contact-card-item span {
+    display: none;
+  }
+
+  .contact-card-item {
+    gap: 0;
+  }
+
+  .contact-card-item i {
+    font-size: 18px;
+  }
+
+  .contact-card-item:first-child {
+    display: none;
+  }
+}

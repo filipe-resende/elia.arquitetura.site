@@ -1,3 +1,14 @@
+/* ── Backdrop ──────────────────────────────────────────────── */
+.landing-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9998;
+}
+
+/* ── Modal glass ───────────────────────────────────────────── */
 .landing-orcamento {
   position: fixed;
   top: 50%;
@@ -7,27 +18,73 @@
   width: 90%;
   max-width: 800px;
   max-height: 90vh;
-  background: linear-gradient(135deg, #fef9f9, #fff8e7);
+  background: rgba(255, 250, 235, 0.18);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   padding: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-y: auto;
-  border-radius: 16px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  animation: fade-in 0.4s ease-out;
 }
 
+/* ── Botão fechar ──────────────────────────────────────────── */
+.orcamento-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, transform 0.2s;
+}
 
+.orcamento-close:hover {
+  background: rgba(220, 38, 38, 0.5);
+  transform: scale(1.1);
+}
+
+/* ── Logo texto ────────────────────────────────────────────── */
 .orcamento-div-logo {
   text-align: center;
+  margin-bottom: 16px;
 }
 
-.orcamento-logo {
-  max-width: 120px;
-  width: 100%;
-  object-fit: cover;
+.orcamento-logo-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  margin: 0 0 2px;
 }
 
+.orcamento-logo-subtitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ── Conteúdo esquerdo (glass inner card) ──────────────────── */
 .orcamento-content {
   display: flex;
   flex-direction: column;
@@ -37,21 +94,29 @@
 .orcamento-text {
   flex: 1;
   max-width: 400px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 20px 24px;
 }
 
 .orcamento-text h1 {
   font-size: 1.7rem;
   margin-bottom: 12px;
-  color: #0f172a;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
   line-height: 1.25;
 }
 
 .orcamento-text p {
   font-size: 1rem;
-  color: #334155;
+  color: rgba(255, 255, 255, 0.88);
   margin-bottom: 16px;
 }
 
+/* ── Formulário / botão WhatsApp ───────────────────────────── */
 .orcamento-form {
   display: flex;
   flex-direction: column;
@@ -61,66 +126,104 @@
 .orcamento-form input {
   padding: 10px 12px;
   font-size: 0.95rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 8px;
-  background: #f8fafc;
-  color: #1e293b;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
 }
 
 .orcamento-button {
-  background-color: #22c55e;
-  color: white;
+  background: rgba(34, 197, 94, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+  color: #fff;
   font-size: 0.95rem;
   font-weight: 700;
   padding: 10px 16px;
-  border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.orcamento-button:hover {
+  background: rgba(34, 197, 94, 0.9);
+  transform: translateY(-1px);
+}
 
+/* ── Coluna masonry (imagens) ──────────────────────────────── */
 .orcamento-masonry {
   margin: auto;
 }
 
-.orcamento-masonry img {
+.orcamento-masonry-grid {
+  column-count: 2;
+  column-gap: 8px;
   width: 100%;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.orcamento-image {
+  width: 100%;
+  height: auto;
   display: block;
+  border-radius: 10px;
+  object-fit: cover;
   break-inside: avoid;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, opacity 0.2s;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.orcamento-masonry img:hover {
+.orcamento-image:hover {
   transform: scale(1.04);
-  opacity: 0.97;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-.orcamento-close {
-  position: absolute;
-  top: -4px;
-  right: 0;
-  font-size: 34px;
-  color: #dc2626;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  line-height: 1;
-  transition: transform 0.2s, color 0.2s;
+/* ── Botão Instagram ───────────────────────────────────────── */
+.orcamento-instagram {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.orcamento-close:hover {
-  color: #b91c1c;
+.orcamento-instagram-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(225, 48, 108, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(225, 48, 108, 0.3);
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s;
 }
 
+.orcamento-instagram-button:hover {
+  background: rgba(225, 48, 108, 0.95);
+  transform: translateY(-1px);
+}
+
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Animação entrada ──────────────────────────────────────── */
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -58%);
   }
 
   to {
@@ -129,51 +232,48 @@
   }
 }
 
-.landing-orcamento {
-  animation: fade-in 0.4s ease-out;
+/* ── Mobile ────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .landing-orcamento {
+    flex-direction: column;
+    width: 94%;
+    padding: 20px 16px;
+    max-height: 92vh;
+    top: 50%;
+  }
+
+  .orcamento-content {
+    width: 100%;
+  }
+
+  .orcamento-text {
+    max-width: 100%;
+  }
+
+  .orcamento-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .orcamento-masonry {
+    width: 100%;
+  }
+
+  .orcamento-masonry-grid {
+    max-width: 100%;
+    column-count: 2;
+  }
 }
 
-.orcamento-instagram {
-  text-align: center;
-  margin-top: 24px;
-}
+@media (max-width: 479px) {
+  .landing-orcamento {
+    padding: 16px 12px;
+  }
 
-.orcamento-instagram-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #e1306c;
-  color: white;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
+  .orcamento-masonry {
+    display: none;
+  }
 
-
-.instagram-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.orcamento-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  object-fit: cover;
-  break-inside: avoid;
-  margin-bottom: 12px;
-  transition: transform 0.2s, opacity 0.2s;
-}
-
-.orcamento-masonry-grid {
-  column-count: 2;
-  column-gap: 0;
-  gap: 12px;
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
+  .orcamento-text h1 {
+    font-size: 1.25rem;
+  }
 }
