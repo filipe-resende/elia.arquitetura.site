@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
+import Sidebar from '../components/sidebar/sidebar'
 import Project from '../components/project/project'
 
 const WA_LINK =
@@ -9,12 +10,12 @@ const WA_LINK =
 export default function Portfolio() {
   return (
     <div className="portfolio-page">
-      <Navbar />
-
       <section
         className="page-header-section"
         style={{ backgroundImage: `url(/img/bg.jpg)` }}
       >
+        <Navbar />
+        <Sidebar />
         <div className="container">
           <h1 className="header-title">
             Portfólio<span>.</span>

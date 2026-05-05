@@ -1251,6 +1251,7 @@ ol {
 .page-header-section {
 	height: 445px;
 	padding-top: 200px;
+	position: relative;
 }
 
 .page-header-section .header-title {

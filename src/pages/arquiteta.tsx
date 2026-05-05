@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Image } from 'react-bootstrap'
 import Navbar from '../components/navbar/navbar'
+import Sidebar from '../components/sidebar/sidebar'
 
 const WA_LINK =
   'https://api.whatsapp.com/send/?phone=553173422196&text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento.&type=phone_number&app_absent=0'
@@ -9,13 +10,13 @@ const WA_LINK =
 export default function Arquiteta() {
   return (
     <div className="arquiteta-page">
-      <Navbar />
-
       {/* ── Header ───────────────────────────────────────────── */}
       <section
         className="page-header-section"
         style={{ backgroundImage: `url(/img/bg.jpg)` }}
       >
+        <Navbar />
+        <Sidebar />
         <div className="container">
           <h1 className="header-title">
             Arquiteta<span>.</span>

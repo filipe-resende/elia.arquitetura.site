@@ -1,82 +1,202 @@
-.masonry-grid {
-  column-count: 1;
-  column-gap: 16px;
+/* ── Cabeçalho ──────────────────────────────────────────────── */
+.gallery-header {
+  margin-bottom: 48px;
 }
 
-@media (min-width: 576px) {
-  .masonry-grid {
-    column-count: 2;
-  }
+.gallery-tag {
+  color: #baff00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 992px) {
-  .masonry-grid {
-    column-count: 3;
-  }
+.gallery-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
 }
 
-.project-card {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 16px;
-  break-inside: avoid;
-  border-radius: 12px;
+.gallery-subtitle {
+  font-size: 16px;
+  color: #888;
+  margin: 0;
+}
+
+/* ── Grid ───────────────────────────────────────────────────── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.gallery-card {
+  display: block;
+  border-radius: 14px;
   overflow: hidden;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background: #111;
 }
 
-.project-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+.gallery-card:hover {
+  text-decoration: none;
 }
 
-.image-wrapper {
+/* ── Imagem ─────────────────────────────────────────────────── */
+.gallery-img-wrap {
   position: relative;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
 }
 
-.image-wrapper img {
+.gallery-img-wrap img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay {
+.gallery-card:hover .gallery-img-wrap img {
+  transform: scale(1.07);
+}
+
+/* ── Overlay (oculto por padrão, surge no hover) ───────────── */
+.gallery-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.35) 55%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay-tag {
+  display: inline-block;
+  background: #baff00;
+  color: #222;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: fit-content;
+  transform: translateY(6px);
+  transition: transform 0.3s ease 0.05s;
+}
+
+.gallery-card:hover .gallery-overlay-tag {
+  transform: translateY(0);
+}
+
+.gallery-overlay-title {
   color: #fff;
-  z-index: 2;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  transform: translateY(6px);
+  transition: transform 0.3s ease 0.08s;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.3));
-  color: #ffffff;
-  z-index: 2;
+.gallery-card:hover .gallery-overlay-title {
+  transform: translateY(0);
 }
 
-.overlay h5 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+.gallery-overlay-desc {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0 0 10px;
+  text-align: left;
+  transform: translateY(6px);
+  transition: transform 0.3s ease 0.11s;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.overlay p {
-  font-size: 0.9rem;
-  margin: 4px 0 0;
-  color: #f0f0f0;
-  opacity: 0.9;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+.gallery-card:hover .gallery-overlay-desc {
+  transform: translateY(0);
+}
+
+.gallery-overlay-arrow {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  transform: translateX(-4px);
+  transition: transform 0.3s ease 0.14s, color 0.3s;
+  display: block;
+}
+
+.gallery-card:hover .gallery-overlay-arrow {
+  transform: translateX(0);
+  color: #baff00;
+}
+
+/* ── Responsivo ─────────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 575px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .gallery-title {
+    font-size: 28px;
+  }
+
+  .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.75) 0%,
+      transparent 60%
+    );
+  }
+
+  .gallery-overlay-tag {
+    display: none;
+  }
+
+  .gallery-overlay-title {
+    font-size: 0.9rem;
+    transform: none;
+  }
+
+  .gallery-overlay-desc {
+    display: none;
+  }
+
+  .gallery-overlay-arrow {
+    display: none;
+  }
 }

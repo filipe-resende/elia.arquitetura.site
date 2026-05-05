@@ -4,52 +4,101 @@ import { NavLink } from 'react-router-dom'
 import './project.css'
 
 const projetos = [
-  { capa: 'capa-loja.jpg', rota: 'loja', titulo: 'Lojas' },
-  { capa: 'capa-escritorio.jpg', rota: 'escritorio', titulo: 'Escritório' },
-  { capa: 'area-lazer-capa.jpg', rota: 'area', titulo: 'Área de Convívio ' },
+  {
+    capa: 'capa-loja.jpg',
+    rota: 'loja',
+    titulo: 'Lojas',
+    descricao:
+      'Ambiente comercial pensado para atrair, acolher e converter. Layout funcional com identidade visual marcante.'
+  },
+  {
+    capa: 'capa-escritorio.jpg',
+    rota: 'escritorio',
+    titulo: 'Escritório',
+    descricao:
+      'Espaço de trabalho que equilibra produtividade e conforto, com iluminação estratégica e aproveitamento inteligente.'
+  },
+  {
+    capa: 'area-lazer-capa.jpg',
+    rota: 'area',
+    titulo: 'Área de Convívio',
+    descricao:
+      'Projeto pensado para reunir pessoas. Integração entre ambientes internos e externos com fluidez e personalidade.'
+  },
   {
     capa: 'estetica-capa.jpg',
     rota: 'estetica',
-    titulo: 'Estúdio de Beleza'
+    titulo: 'Estúdio de Beleza',
+    descricao:
+      'Ambiente que transmite cuidado desde a entrada. Design que valoriza a experiência da cliente em cada detalhe.'
   },
-  { capa: 'gourmet-capa.jpg', rota: 'gourmet', titulo: 'Área Gourmet' },
-  { capa: 'cozinha-capa.jpg', rota: 'cozinha', titulo: 'Cozinha' },
-  { capa: 'area-gourmet-capa.jpg', rota: 'lazer', titulo: 'Área Gourmet ' },
-  { capa: 'sacada-capa.jpg', rota: 'sacada', titulo: 'Sacada ' },
-  { capa: 'sala-capa.jpg', rota: 'sala', titulo: 'Sala ' }
+  {
+    capa: 'gourmet-capa.jpg',
+    rota: 'gourmet',
+    titulo: 'Área Gourmet',
+    descricao:
+      'Espaço gourmet que une praticidade e sofisticação, criado para receber bem e transformar momentos em memórias.'
+  },
+  {
+    capa: 'cozinha-capa.jpg',
+    rota: 'cozinha',
+    titulo: 'Cozinha',
+    descricao:
+      'Cozinha funcional e elegante, com soluções de armazenamento inteligentes e acabamentos que encantam o dia a dia.'
+  },
+  {
+    capa: 'area-gourmet-capa.jpg',
+    rota: 'lazer',
+    titulo: 'Área Gourmet II',
+    descricao:
+      'Segunda versão de área gourmet com proposta mais intimista, voltada para o convívio familiar e receber com estilo.'
+  },
+  {
+    capa: 'sacada-capa.jpg',
+    rota: 'sacada',
+    titulo: 'Sacada',
+    descricao:
+      'Pequeno espaço transformado em refúgio. Projeto que aproveita cada centímetro para criar uma extensão do lar.'
+  },
+  {
+    capa: 'sala-capa.jpg',
+    rota: 'sala',
+    titulo: 'Sala',
+    descricao:
+      'Sala de estar com identidade própria — paleta cuidadosa, mobiliário planejado e atmosfera que convida a ficar.'
+  }
 ]
 
 export default function Project() {
   return (
     <section id="projects" className="projects-section pb50">
       <Container>
-        <div className="section-title text-center mb-5">
-          <h1 className="display-5">
-            <span>Portfólio</span>
-            <h2 className="text-2xl font-semibold mb-2">
-              <p className="text-muted-foreground text-center">
-                Alguns dos nossos projetos que transformaram ideias em espaços
-                únicos.
-              </p>
-            </h2>
-          </h1>
+        <div className="gallery-header text-center">
+          <p className="gallery-tag">Nosso trabalho</p>
+          <h2 className="gallery-title">Portfólio</h2>
+          <p className="gallery-subtitle">
+            Projetos que transformaram ideias em espaços únicos.
+          </p>
         </div>
 
-        <div className="masonry-grid">
+        <div className="gallery-grid">
           {projetos.map((projeto, index) => (
             <NavLink
               key={index}
               to={`/projetos/${projeto.rota}`}
-              className="project-card"
+              className="gallery-card"
             >
-              <div className="image-wrapper">
+              <div className="gallery-img-wrap">
                 <img
                   src={`/img/projetos/${projeto.capa}`}
                   alt={projeto.titulo}
+                  loading="lazy"
                 />
-                <div className="overlay">
-                  <h5>{projeto.titulo}</h5>
-                  <p>3 foto(s)</p>
+                <div className="gallery-overlay">
+                  <span className="gallery-overlay-tag">Ver projeto</span>
+                  <h5 className="gallery-overlay-title">{projeto.titulo}</h5>
+                  <p className="gallery-overlay-desc">{projeto.descricao}</p>
+                  <span className="gallery-overlay-arrow">→</span>
                 </div>
               </div>
             </NavLink>

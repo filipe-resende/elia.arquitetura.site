@@ -2,18 +2,19 @@ import React from 'react'
 import { Image } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
+import Sidebar from '../components/sidebar/sidebar'
 
 export default function About() {
   return (
     <div className="about">
-      <Navbar />
-
       <section
         className="page-header-section"
         style={{
           backgroundImage: `url(/img/bg.jpg)`
         }}
       >
+        <Navbar />
+        <Sidebar />
         <div className="container">
           <h1 className="header-title">
             Sobre nós<span>.</span>

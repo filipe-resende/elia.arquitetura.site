@@ -2,6 +2,7 @@ import React from 'react'
 import { Image } from 'react-bootstrap'
 import { NavLink, useParams } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
+import Sidebar from '../components/sidebar/sidebar'
 
 export default function Projects() {
   const { projeto } = useParams()
@@ -32,13 +33,14 @@ export default function Projects() {
 
   return (
     <div className="project">
-      <Navbar />
       <section
         className="page-header-section"
         style={{
           backgroundImage: `url(/img/bg.jpg)`
         }}
       >
+        <Navbar />
+        <Sidebar />
         <div className="container">
           <h1 className="header-title">
             Projetos<span>.</span>
