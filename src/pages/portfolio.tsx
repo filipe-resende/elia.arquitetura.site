@@ -23,6 +23,43 @@ export default function Portfolio() {
         </div>
       </section>
 
+      <section className="spad">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 text-center">
+              <p className="gallery-tag">Nosso trabalho</p>
+              <h2 className="gallery-title">Projetos realizados</h2>
+              <p
+                style={{
+                  fontSize: '1.05rem',
+                  lineHeight: '1.8',
+                  color: '#555',
+                  marginBottom: '0.5rem'
+                }}
+              >
+                Cada projeto nasce de uma escuta cuidadosa e evolui até se
+                tornar um espaço que reflete quem o habita. Ao longo de mais de
+                5 anos de atuação em Belo Horizonte e região, a Eliá Arquitetura
+                desenvolveu projetos residenciais e comerciais que equilibram
+                estética, funcionalidade e viabilidade financeira.
+              </p>
+              <p
+                style={{
+                  fontSize: '1.05rem',
+                  lineHeight: '1.8',
+                  color: '#555'
+                }}
+              >
+                Navegue pelas categorias abaixo e conheça os ambientes que já
+                transformamos — salas, cozinhas, áreas gourmet, escritórios,
+                lojas e muito mais. Clique em qualquer projeto para ver as fotos
+                completas do espaço.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Project />
 
       <section className="promo-section">

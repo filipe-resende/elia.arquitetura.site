@@ -52,10 +52,7 @@ function Home() {
                 <p className="hero-eyebrow">
                   Arquitetura pensada para o seu estilo de vida
                 </p>
-                <h2 className="hero-title">
-                  Transforme sua casa em um espaço sofisticado, funcional e
-                  feito para viver bem
-                </h2>
+                <h1 className="hero-title">Seu espaço, do seu jeito</h1>
                 <ul className="hero-bullets">
                   <li>
                     ✔ Projetos personalizados que refletem sua identidade
@@ -345,10 +342,8 @@ function Home() {
                 desenvolvido com atenção aos detalhes, respeitando o estilo de
                 vida e o orçamento de cada cliente.
               </p>
-              <NavLink to="/sobre">
-                <a href="#" className="site-btn sb-dark">
-                  Saiba mais.
-                </a>
+              <NavLink to="/sobre" className="site-btn sb-dark">
+                Saiba mais sobre a arquiteta
               </NavLink>
             </div>
           </div>
@@ -491,10 +486,13 @@ function Home() {
                         <NavLink to="/">Início</NavLink>
                       </li>
                       <li>
-                        <NavLink to="/sobre">Sobre nós</NavLink>
+                        <NavLink to="/portfolio">Portfólio</NavLink>
                       </li>
                       <li>
-                        <NavLink to="/orcamento">Orçamento</NavLink>
+                        <NavLink to="/arquiteta">Arquiteta</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/sobre">Sobre nós</NavLink>
                       </li>
                     </ul>
                   </div>

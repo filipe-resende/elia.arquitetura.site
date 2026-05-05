@@ -4,6 +4,9 @@ import { NavLink } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
 
+const WA_LINK =
+  'https://api.whatsapp.com/send/?phone=553173422196&text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento.&type=phone_number&app_absent=0'
+
 export default function About() {
   return (
     <div className="about">
@@ -145,11 +148,14 @@ export default function About() {
               </p>
             </div>
             <div className="col-lg-3 text-lg-right">
-              <NavLink to="/orcamento">
-                <a href="#" className="site-btn sb-dark mt-4">
-                  Orçamento{' '}
-                </a>
-              </NavLink>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-btn sb-dark mt-4"
+              >
+                Solicitar orçamento
+              </a>
             </div>
           </div>
         </div>
@@ -177,31 +183,16 @@ export default function About() {
                   <div className="footer-item">
                     <ul>
                       <li>
-                        <NavLink to="/">
-                          {' '}
-                          <a href="#">Início</a>
-                        </NavLink>
+                        <NavLink to="/">Início</NavLink>
                       </li>
                       <li>
-                        <NavLink to="/sobre">
-                          {' '}
-                          <a href="#">Sobre nós</a>
-                        </NavLink>
+                        <NavLink to="/portfolio">Portfólio</NavLink>
                       </li>
                       <li>
-                        <NavLink to="/orcamento">
-                          {' '}
-                          <a href="#">Orçamento</a>
-                        </NavLink>
+                        <NavLink to="/arquiteta">Arquiteta</NavLink>
                       </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="footer-item">
-                    <ul>
                       <li>
-                        <a href="#">Terms & Conditions</a>
+                        <NavLink to="/sobre">Sobre nós</NavLink>
                       </li>
                     </ul>
                   </div>
@@ -211,9 +202,8 @@ export default function About() {
           </div>
         </div>
         <div className="copyright">
-          Copyright &copy;{' '}
-          <script>document.write(new Date().getFullYear());</script> All rights
-          reserved. <br />
+          Copyright &copy; {new Date().getFullYear()} Eliá Arquitetura. Todos os
+          direitos reservados.
         </div>
       </footer>
     </div>

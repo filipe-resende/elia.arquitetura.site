@@ -2501,6 +2501,8 @@ ol {
 	font-size: 52px;
 	line-height: 1.15;
 	margin-bottom: 24px;
+	color: #fff;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
 
 .hero-bullets {

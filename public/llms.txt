@@ -1,0 +1,17 @@
+# Eliá Studio Arquitetura
+
+> Escritório de arquitetura e design de interiores localizado em Belo Horizonte, MG. Especializado em projetos residenciais e comerciais com mais de 5 anos de experiência, 60+ projetos entregues e presença ativa no Instagram.
+
+## Páginas
+
+- [Início](https://www.eliastudioarq.com.br/): Página principal com portfólio de projetos, serviços oferecidos e chamada para orçamento via WhatsApp.
+- [Portfólio](https://www.eliastudioarq.com.br/portfolio): Galeria completa de projetos organizados por categoria.
+- [Projetos](https://www.eliastudioarq.com.br/projetos/sala): Categorias disponíveis — sala, cozinha, gourmet, escritório, loja, estética, lazer, área externa, sacada.
+- [Arquiteta](https://www.eliastudioarq.com.br/arquiteta): Perfil e trajetória da arquiteta responsável pelo escritório.
+- [Sobre](https://www.eliastudioarq.com.br/sobre): História, missão e depoimentos de clientes.
+
+## Contato
+
+- WhatsApp: +55 (31) 97342-2196
+- Instagram: @eliastudioarq
+- Site: https://www.eliastudioarq.com.br
