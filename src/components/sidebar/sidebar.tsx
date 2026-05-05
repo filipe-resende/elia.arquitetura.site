@@ -7,8 +7,10 @@ export default function Sidebar() {
     <>
       <div className="left-bar">
         <NavLink to="/home" className="logo-area">
-          <span className="logo-text-title">Elia Arquitetura</span>
-          <span className="logo-text-sub">Arq. Elis Regina</span>
+          <span className="logo-text-title">
+            Elia Arquitetura{' '}
+            <span className="logo-text-sub">Arq. Elis Araujo</span>
+          </span>
         </NavLink>
         <div className="left-bar-content">
           <div className="social-links">

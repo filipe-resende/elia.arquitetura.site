@@ -50,7 +50,7 @@ function Home() {
             <div className="slide-inner">
               <div className="slide-content">
                 <p className="hero-eyebrow">
-                  Arquitetura residencial pensada para o seu estilo de vida
+                  Arquitetura pensada para o seu estilo de vida
                 </p>
                 <h2 className="hero-title">
                   Transforme sua casa em um espaço sofisticado, funcional e
