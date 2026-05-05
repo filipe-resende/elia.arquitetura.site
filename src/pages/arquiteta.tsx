@@ -35,7 +35,9 @@ export default function Arquiteta() {
               />
             </div>
             <div className="col-lg-7">
-              <p className="arq-tag">Conheça a história por trás dos projetos</p>
+              <p className="arq-tag">
+                Conheça a história por trás dos projetos
+              </p>
               <h1>
                 Arq. <span>Elis Araujo</span>
               </h1>
@@ -47,10 +49,10 @@ export default function Arquiteta() {
               </p>
               <p>
                 Formada em Arquitetura e Urbanismo, Elis fundou a{' '}
-                <strong>Eliá Arquitetura</strong> com um propósito claro:
-                tornar a arquitetura de qualidade acessível a quem realmente
-                precisa — sem abrir mão da personalidade, da funcionalidade e
-                do cuidado em cada detalhe.
+                <strong>Eliá Arquitetura</strong> com um propósito claro: tornar
+                a arquitetura de qualidade acessível a quem realmente precisa —
+                sem abrir mão da personalidade, da funcionalidade e do cuidado
+                em cada detalhe.
               </p>
               <p>
                 Ao longo de anos de atuação em Belo Horizonte e região, ela
@@ -118,8 +120,9 @@ export default function Arquiteta() {
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
               <blockquote className="arq-blockquote">
-                "Acredito que todo espaço tem o potencial de se tornar
-                extraordinário quando é pensado com cuidado, escuta e propósito."
+                &ldquo;Acredito que todo espaço tem o potencial de se tornar
+                extraordinário quando é pensado com cuidado, escuta e
+                propósito.&rdquo;
               </blockquote>
               <cite className="arq-cite">— Arq. Elis Araujo</cite>
             </div>
@@ -207,8 +210,8 @@ export default function Arquiteta() {
           </div>
         </div>
         <div className="copyright">
-          Copyright &copy; {new Date().getFullYear()} Eliá Arquitetura. Todos
-          os direitos reservados.
+          Copyright &copy; {new Date().getFullYear()} Eliá Arquitetura. Todos os
+          direitos reservados.
         </div>
       </footer>
     </div>

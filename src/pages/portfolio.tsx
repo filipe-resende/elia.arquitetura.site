@@ -103,8 +103,8 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="copyright">
-          Copyright &copy; {new Date().getFullYear()} Eliá Arquitetura. Todos
-          os direitos reservados.
+          Copyright &copy; {new Date().getFullYear()} Eliá Arquitetura. Todos os
+          direitos reservados.
         </div>
       </footer>
     </div>
