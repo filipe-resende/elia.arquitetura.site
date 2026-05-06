@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Image } from 'react-bootstrap'
 import Navbar from '../components/navbar/navbar'
@@ -39,8 +39,8 @@ function Home() {
   return (
     <div className="App">
       <SEO
-        title="Arquiteto em Belo Horizonte"
-        description="Arquitetura residencial em BH com atendimento personalizado e preços acessíveis. Solicite orçamento grátis pelo WhatsApp. ✔ Projetos modernos e funcionais."
+        title="Arquiteto em Ibirité e BH | Projetos Modernos"
+        description="Arquitetura residencial acessível em Ibirité e BH. Projeto de casa moderna, reforma e interiores com atendimento humanizado. Solicite orçamento no WhatsApp!"
         canonical="/"
       />
       <Navbar />
@@ -56,19 +56,20 @@ function Home() {
             <div className="slide-inner">
               <div className="slide-content">
                 <p className="hero-eyebrow">
-                  Arquitetura pensada para o seu estilo de vida
+                  Arquiteto em Ibirité e Belo Horizonte
                 </p>
-                <h1 className="hero-title">Seu espaço, do seu jeito</h1>
+                <h1 className="hero-title">
+                  Arquiteto em Ibirité | Projetos Modernos e Acessíveis
+                </h1>
+                <p className="hero-subtitle">
+                  Transformamos ideias em projetos reais em Ibirité, com
+                  soluções modernas, acessíveis e pensadas para o seu estilo de
+                  vida.
+                </p>
                 <ul className="hero-bullets">
-                  <li>
-                    ✔ Projetos personalizados que refletem sua identidade
-                  </li>
-                  <li>
-                    ✔ Acompanhamento próximo, com atenção em cada detalhe
-                  </li>
-                  <li>
-                    ✔ Soluções inteligentes que equilibram estética e custo
-                  </li>
+                  <li>✔ Projetos residenciais personalizados</li>
+                  <li>✔ Acompanhamento próximo em cada etapa</li>
+                  <li>✔ Custo acessível e transparente</li>
                   <li>✔ Valorização real do seu imóvel</li>
                 </ul>
                 <a
@@ -77,13 +78,13 @@ function Home() {
                   rel="noopener noreferrer"
                   className="site-btn sb-light"
                 >
-                  Solicitar orçamento agora
+                  Solicitar orçamento no WhatsApp
                 </a>
                 <p className="hero-friction">
                   Atendimento rápido, sem compromisso e sem pressão
                 </p>
                 <p className="hero-social-proof">
-                  Mais de 60 projetos desenvolvidos com clientes satisfeitos
+                  Mais de 60 projetos em Ibirité e BH com clientes satisfeitos
                 </p>
               </div>
             </div>
@@ -97,14 +98,15 @@ function Home() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 mb-5 mb-lg-0">
-              <p className="lp-tag">Para você que...</p>
+              <p className="lp-tag">Escritório de Arquitetura em Ibirité</p>
               <h2 className="lp-leads-pain">
                 Está cansado de ver sua casa sem personalidade ou não sabe por
-                onde começar uma reforma?
+                onde começar uma reforma em Ibirité?
               </h2>
               <p className="lp-leads-solution">
-                A Eliá Arquitetura transforma ideias em projetos claros,
-                funcionais e viáveis sem complicação.
+                A Eliá Arquitetura atua em Ibirité desenvolvendo projetos
+                residenciais personalizados, com atendimento próximo e foco no
+                seu orçamento.
               </p>
             </div>
             <div className="col-lg-6">

@@ -12,7 +12,7 @@ export default function Arquiteta() {
   return (
     <div className="arquiteta-page">
       <SEO
-        title="Arquiteta em Belo Horizonte e Ibirité"
+        title="Arquiteto em Ibirité e BH | Residencial Moderno"
         description="Conheça a Arq. Elis Araujo — arquiteta em BH e Ibirité com foco em projetos residenciais personalizados, acessíveis e feitos para o seu estilo de vida."
         canonical="/arquiteta"
       />

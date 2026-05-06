@@ -1,4 +1,3 @@
-import React from 'react'
 import { Image } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
@@ -12,8 +11,8 @@ export default function About() {
   return (
     <div className="about">
       <SEO
-        title="Sobre Nós"
-        description="Conheça a Eliá Arquitetura, escritório especializado em projetos residenciais em BH. Atendimento humanizado e soluções personalizadas para cada cliente."
+        title="Projetos Arquitetônicos em Ibirité | Elia"
+        description="Escritório de arquitetura em Ibirité e BH. Conheça a Eliá Arquitetura — projetos residenciais personalizados com atendimento humanizado e preço justo."
         canonical="/sobre"
       />
       <section

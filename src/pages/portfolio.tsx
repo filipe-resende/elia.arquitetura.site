@@ -12,8 +12,8 @@ export default function Portfolio() {
   return (
     <div className="portfolio-page">
       <SEO
-        title="Portfólio de Projetos"
-        description="Veja projetos residenciais reais executados em Belo Horizonte e Ibirité. Cozinhas, salas, áreas gourmet e mais. Solicite seu orçamento!"
+        title="Portfólio Arquitetura | Ibirité e BH"
+        description="Portfólio de projetos arquitetônicos em Ibirité e Belo Horizonte. Veja projetos reais de cozinhas, salas, áreas gourmet e mais. Solicite orçamento!"
         canonical="/portfolio"
       />
       <section

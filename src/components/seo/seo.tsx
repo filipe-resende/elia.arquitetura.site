@@ -12,7 +12,7 @@ const BASE_URL = 'https://eliastudioarq.com.br'
 const DEFAULT_IMAGE = `${BASE_URL}/img/bg.jpg`
 
 export default function SEO({ title, description, canonical, image }: SEOProps) {
-  const fullTitle = `${title} | Eliá Arquitetura`
+  const fullTitle = title
   const url = canonical ? `${BASE_URL}${canonical}` : BASE_URL
   const img = image || DEFAULT_IMAGE
 

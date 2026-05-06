@@ -101,4 +101,27 @@
     <priority>0.7</priority>
   </url>
 
+
+  <!-- Páginas SEO local — Ibirité -->
+  <url>
+    <loc>https://eliastudioarq.com.br/arquiteto-em-ibirite</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eliastudioarq.com.br/projetos-residenciais-ibirite</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://eliastudioarq.com.br/arquitetura-interiores-ibirite</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
