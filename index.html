@@ -10,14 +10,14 @@
     <meta name="description" content="Arquitetura residencial em BH com atendimento personalizado e preços acessíveis. Solicite orçamento grátis pelo WhatsApp. ✔ Projetos modernos e funcionais." />
     <meta name="keywords" content="arquiteto belo horizonte, arquitetura residencial BH, projeto de interiores BH, reforma com arquiteto BH, escritório de arquitetura BH, arquiteto Ibirité" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.eliarquitetura.com.br/" />
+    <link rel="canonical" href="https://eliastudioarq.com.br/" />
 
     <!-- Open Graph (WhatsApp, Facebook) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.eliarquitetura.com.br/" />
+    <meta property="og:url" content="https://eliastudioarq.com.br/" />
     <meta property="og:title" content="Arquiteto em Belo Horizonte | Eliá Arquitetura" />
     <meta property="og:description" content="Projetos residenciais modernos em BH. Atendimento humanizado, orçamento acessível. Fale pelo WhatsApp!" />
-    <meta property="og:image" content="https://www.eliarquitetura.com.br/img/bg.jpg" />
+    <meta property="og:image" content="https://eliastudioarq.com.br/img/bg.jpg" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Eliá Arquitetura" />
 
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Arquiteto em Belo Horizonte | Eliá Arquitetura" />
     <meta name="twitter:description" content="Projetos residenciais modernos em BH. Atendimento humanizado, orçamento acessível." />
-    <meta name="twitter:image" content="https://www.eliarquitetura.com.br/img/bg.jpg" />
+    <meta name="twitter:image" content="https://eliastudioarq.com.br/img/bg.jpg" />
 
     <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
@@ -34,10 +34,10 @@
       "@type": "LocalBusiness",
       "name": "Eliá Arquitetura",
       "description": "Escritório de arquitetura residencial em Belo Horizonte com foco em projetos personalizados, modernos e acessíveis.",
-      "url": "https://www.eliarquitetura.com.br",
+      "url": "https://eliastudioarq.com.br",
       "telephone": "+55-31-97342-2196",
       "email": "eliastudioarq@gmail.com",
-      "image": "https://www.eliarquitetura.com.br/img/bg.jpg",
+      "image": "https://eliastudioarq.com.br/img/bg.jpg",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -70,6 +70,24 @@
     <!-- Estilos externos -->
     <link rel="stylesheet" href="/css/owl.carousel.css" />
     <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- SPA redirect handler (GitHub Pages) -->
+    <script>
+      (function () {
+        var qs = window.location.search;
+        if (qs && qs.indexOf('?p=') === 0) {
+          var path = qs
+            .slice(3)
+            .split('&q=')
+            .map(function (s) { return s.replace(/~and~/g, '&'); });
+          window.history.replaceState(
+            null,
+            null,
+            path[0] + (path[1] ? '?' + path[1] : '') + window.location.hash
+          );
+        }
+      })();
+    </script>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HM717G2B1L"></script>
