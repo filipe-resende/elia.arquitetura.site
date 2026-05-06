@@ -4,7 +4,14 @@
       "Bash(Get-ChildItem -Path \"c:\\\\Workspace\\\\elia.arquitetura.site\" -Recurse -Depth 2)",
       "Bash(Select-Object FullName, PSIsContainer)",
       "Bash(Format-Table -AutoSize)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(del package-lock.json)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(type \"C:\\\\Users\\\\FILIPE~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Workspace-elia-arquitetura-site\\\\cd7ac500-130a-4039-b7cb-stillbvk2xcu73\\\\tasks\\\\bcwi7vtdz.output\" 2>nul || type \"C:\\\\Users\\\\FILIPE~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Workspace-elia-arquitetura-site\\\\cd7ac500-130a-4039-b7cb-311f0aa19fbf\\\\tasks\\\\bcwi7vtdz.output\" 2>&1 | tail -30)"
+    ],
+    "additionalDirectories": [
+      "c:\\Workspace\\elia.arquitetura.site"
     ]
   }
 }
