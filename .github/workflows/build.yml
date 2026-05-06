@@ -14,7 +14,7 @@ steps:
 
   - uses: actions/setup-node@v3
     with:
-      node-version: '24.x' 
+      node-version: '24.x'
 
   - name: Install and Build
     run: |
@@ -28,3 +28,4 @@ steps:
       github_token: ${{ secrets.GITHUB_TOKEN }}
       publish_dir: ./dist
       cname: eliastudioarq.com.br
+
