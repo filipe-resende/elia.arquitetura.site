@@ -8,32 +8,10 @@ import Arquiteta from '../pages/arquiteta'
 
 export const Routes = () =>
   useRoutes([
-    {
-      path: '*',
-      element: <Home />
-    },
-    {
-      path: '/',
-      element: <Home />
-    },
-    {
-      path: '/inicio',
-      element: <Home />
-    },
-    {
-      path: '/sobre',
-      element: <About />
-    },
-    {
-      path: '/portfolio',
-      element: <Portfolio />
-    },
-    {
-      path: '/arquiteta',
-      element: <Arquiteta />
-    },
-    {
-      path: '/projetos/:projeto',
-      element: <Projects />
-    }
+    { path: '/', element: <Home /> },
+    { path: '/sobre', element: <About /> },
+    { path: '/portfolio', element: <Portfolio /> },
+    { path: '/arquiteta', element: <Arquiteta /> },
+    { path: '/projetos/:projeto', element: <Projects /> },
+    { path: '*', element: <Home /> }
   ])
