@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.eliastudioarq.com.br/sitemap.xml
+# Bots de IA
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /img/
+
+Sitemap: https://eliastudioarq.com.br/sitemap.xml

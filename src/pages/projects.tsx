@@ -23,15 +23,15 @@ export default function Projects() {
   const path = '/img/projetos/'
 
   const chaveValor: Record<string, string[]> = {
-    loja: ['projeto-loja-ibirite.jpg', 'projeto-loja-ibirite-2.jpg', 'projeto-loja-ibirite-3.jpg'],
-    escritorio: ['projeto-escritorio-ibirite.jpg'],
-    estetica: ['projeto-estetica-beleza-ibirite.jpg', 'projeto-estetica-beleza-ibirite-2.jpg', 'projeto-estetica-beleza-ibirite-3.jpg'],
-    gourmet: ['projeto-area-gourmet-ibirite.jpg', 'projeto-area-gourmet-ibirite-2.jpg'],
-    cozinha: ['projeto-cozinha-moderna-ibirite.jpg', 'projeto-cozinha-moderna-ibirite-2.jpg', 'projeto-cozinha-moderna-ibirite-3.jpg'],
-    lazer: ['projeto-lazer-gourmet-ibirite.jpg', 'projeto-lazer-gourmet-ibirite-2.jpg', 'projeto-lazer-gourmet-ibirite-3.jpg'],
-    area: ['projeto-area-convivio-ibirite.jpg', 'projeto-area-convivio-ibirite-2.jpg', 'projeto-area-convivio-ibirite-3.jpg'],
-    sacada: ['projeto-sacada-moderna-ibirite.jpg', 'projeto-sacada-moderna-ibirite-2.jpg', 'projeto-sacada-moderna-ibirite-3.jpg'],
-    sala: ['projeto-sala-estar-ibirite.jpg', 'projeto-sala-estar-ibirite-2.jpg', 'projeto-sala-estar-ibirite-3.jpg']
+    loja: ['projeto-loja-ibirite.webp', 'projeto-loja-ibirite-2.webp', 'projeto-loja-ibirite-3.webp'],
+    escritorio: ['projeto-escritorio-ibirite.webp'],
+    estetica: ['projeto-estetica-beleza-ibirite.webp', 'projeto-estetica-beleza-ibirite-2.webp', 'projeto-estetica-beleza-ibirite-3.webp'],
+    gourmet: ['projeto-area-gourmet-ibirite.webp', 'projeto-area-gourmet-ibirite-2.webp'],
+    cozinha: ['projeto-cozinha-moderna-ibirite.webp', 'projeto-cozinha-moderna-ibirite-2.webp', 'projeto-cozinha-moderna-ibirite-3.webp'],
+    lazer: ['projeto-lazer-gourmet-ibirite.webp', 'projeto-lazer-gourmet-ibirite-2.webp', 'projeto-lazer-gourmet-ibirite-3.webp'],
+    area: ['projeto-area-convivio-ibirite.webp', 'projeto-area-convivio-ibirite-2.webp', 'projeto-area-convivio-ibirite-3.webp'],
+    sacada: ['projeto-sacada-moderna-ibirite.webp', 'projeto-sacada-moderna-ibirite-2.webp', 'projeto-sacada-moderna-ibirite-3.webp'],
+    sala: ['projeto-sala-estar-ibirite.webp', 'projeto-sala-estar-ibirite-2.webp', 'projeto-sala-estar-ibirite-3.webp']
   }
 
   function getImages() {

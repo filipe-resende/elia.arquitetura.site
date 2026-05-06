@@ -73,13 +73,13 @@ export default function InterioresIbirite() {
             </div>
             <div className="col-lg-4 pt-4">
               <img
-                src="/img/projetos/cozinha-capa.jpg"
+                src="/img/projetos/projeto-cozinha-moderna-ibirite.webp"
                 alt="Projeto de cozinha moderna em Ibirité MG pela Eliá Arquitetura"
                 style={{ width: '100%', borderRadius: '12px', marginBottom: '16px' }}
                 loading="lazy"
               />
               <img
-                src="/img/projetos/sala-capa.jpg"
+                src="/img/projetos/projeto-sala-estar-ibirite.webp"
                 alt="Projeto de sala de estar em Ibirité MG pela Eliá Arquitetura"
                 style={{ width: '100%', borderRadius: '12px' }}
                 loading="lazy"

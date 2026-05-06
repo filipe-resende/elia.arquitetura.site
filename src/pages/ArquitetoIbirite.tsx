@@ -79,7 +79,7 @@ export default function ArquitetoIbirite() {
             </div>
             <div className="col-lg-4 pt-4">
               <img
-                src="/img/projetos/gourmet-capa.jpg"
+                src="/img/projetos/projeto-area-gourmet-ibirite.webp"
                 alt="Projeto de arquitetura residencial em Ibirité MG pela Eliá Arquitetura"
                 style={{ width: '100%', borderRadius: '12px' }}
                 loading="lazy"
