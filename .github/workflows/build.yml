@@ -1,31 +1,30 @@
 name: deploy
 
 on:
-push:
-branches:
-- master
+  push:
+    branches:
+      - master
 
 jobs:
-deploy:
-runs-on: ubuntu-22.04
+  deploy:
+    runs-on: ubuntu-22.04
 
-steps:
-  - uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v2
 
-  - uses: actions/setup-node@v3
-    with:
-      node-version: '24.x'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '24.x'
 
-  - name: Install and Build
-    run: |
-      npm ci
-      npm run build
-      cp dist/index.html dist/404.html
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+          cp dist/index.html dist/404.html
 
-  - name: Deploy to gh-pages
-    uses: peaceiris/actions-gh-pages@v3
-    with:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
-      publish_dir: ./dist
-      cname: eliastudioarq.com.br
-
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: eliastudioarq.com.br
