@@ -9,14 +9,14 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './assets/redux/store'
 import { WhatsappButton } from './components/whatsapp/whatsapp'
-import Landing from './components/landing/landing'
+// import Landing from './components/landing/landing'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
     <React.StrictMode>
       <Router>
         <Routes />
-        <Landing />
+        {/* <Landing /> */}
         <WhatsappButton />
       </Router>
     </React.StrictMode>
