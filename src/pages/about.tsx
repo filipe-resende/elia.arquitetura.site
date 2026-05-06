@@ -3,6 +3,7 @@ import { Image } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
+import SEO from '../components/seo/seo'
 
 const WA_LINK =
   'https://api.whatsapp.com/send/?phone=553173422196&text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento.&type=phone_number&app_absent=0'
@@ -10,6 +11,11 @@ const WA_LINK =
 export default function About() {
   return (
     <div className="about">
+      <SEO
+        title="Sobre Nós"
+        description="Conheça a Eliá Arquitetura, escritório especializado em projetos residenciais em BH. Atendimento humanizado e soluções personalizadas para cada cliente."
+        canonical="/sobre"
+      />
       <section
         className="page-header-section"
         style={{

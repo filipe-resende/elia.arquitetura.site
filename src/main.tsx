@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { HelmetProvider } from 'react-helmet-async'
+import { Analytics } from '@vercel/analytics/react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
 import 'animate.css/animate.min.css'
@@ -9,16 +11,17 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './assets/redux/store'
 import { WhatsappButton } from './components/whatsapp/whatsapp'
-// import Landing from './components/landing/landing'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <Router>
-        <Routes />
-        {/* <Landing /> */}
-        <WhatsappButton />
-      </Router>
-    </React.StrictMode>
-  </Provider>
+  <HelmetProvider>
+    <Provider store={store}>
+      <React.StrictMode>
+        <Router>
+          <Routes />
+          <WhatsappButton />
+          <Analytics />
+        </Router>
+      </React.StrictMode>
+    </Provider>
+  </HelmetProvider>
 )

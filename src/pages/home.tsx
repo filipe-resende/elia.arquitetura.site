@@ -5,6 +5,7 @@ import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
 import Project from '../components/project/project'
 import Experience from '../components/experience/experience'
+import SEO from '../components/seo/seo'
 
 const WA_LINK =
   'https://api.whatsapp.com/send/?phone=553173422196&text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento.&type=phone_number&app_absent=0'
@@ -37,6 +38,11 @@ function Home() {
 
   return (
     <div className="App">
+      <SEO
+        title="Arquiteto em Belo Horizonte"
+        description="Arquitetura residencial em BH com atendimento personalizado e preços acessíveis. Solicite orçamento grátis pelo WhatsApp. ✔ Projetos modernos e funcionais."
+        canonical="/"
+      />
       <Navbar />
 
       {/* ── 1. Hero ──────────────────────────────────────────── */}

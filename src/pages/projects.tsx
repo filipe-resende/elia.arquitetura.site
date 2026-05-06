@@ -3,6 +3,7 @@ import { Image } from 'react-bootstrap'
 import { NavLink, useParams } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
+import SEO from '../components/seo/seo'
 
 const categorias = [
   { rota: 'loja', titulo: 'Lojas' },
@@ -43,9 +44,16 @@ export default function Projects() {
 
   const images = getImages()
   const outras = categorias.filter(c => c.rota !== projeto)
+  const categoriaAtual = categorias.find(c => c.rota === projeto)
+  const tituloCategoria = categoriaAtual?.titulo ?? 'Projeto'
 
   return (
     <div className="project">
+      <SEO
+        title={`${tituloCategoria} — Projeto em BH e Ibirité`}
+        description={`Veja o projeto de ${tituloCategoria.toLowerCase()} desenvolvido pela Elis Araujo Arquiteta em Belo Horizonte e Ibirité. Solicite seu orçamento!`}
+        canonical={`/projetos/${projeto}`}
+      />
       <section
         className="page-header-section"
         style={{ backgroundImage: `url(/img/bg.jpg)` }}

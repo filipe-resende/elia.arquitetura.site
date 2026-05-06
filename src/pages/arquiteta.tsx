@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { Image } from 'react-bootstrap'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
+import SEO from '../components/seo/seo'
 
 const WA_LINK =
   'https://api.whatsapp.com/send/?phone=553173422196&text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento.&type=phone_number&app_absent=0'
@@ -10,6 +11,11 @@ const WA_LINK =
 export default function Arquiteta() {
   return (
     <div className="arquiteta-page">
+      <SEO
+        title="Arquiteta em Belo Horizonte e Ibirité"
+        description="Conheça a Arq. Elis Araujo — arquiteta em BH e Ibirité com foco em projetos residenciais personalizados, acessíveis e feitos para o seu estilo de vida."
+        canonical="/arquiteta"
+      />
       {/* ── Header ───────────────────────────────────────────── */}
       <section
         className="page-header-section"

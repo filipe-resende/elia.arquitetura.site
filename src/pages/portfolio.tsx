@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Navbar from '../components/navbar/navbar'
 import Sidebar from '../components/sidebar/sidebar'
 import Project from '../components/project/project'
+import SEO from '../components/seo/seo'
 
 const WA_LINK =
   'https://api.whatsapp.com/send/?phone=553173422196&text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento.&type=phone_number&app_absent=0'
@@ -10,6 +11,11 @@ const WA_LINK =
 export default function Portfolio() {
   return (
     <div className="portfolio-page">
+      <SEO
+        title="Portfólio de Projetos"
+        description="Veja projetos residenciais reais executados em Belo Horizonte e Ibirité. Cozinhas, salas, áreas gourmet e mais. Solicite seu orçamento!"
+        canonical="/portfolio"
+      />
       <section
         className="page-header-section"
         style={{ backgroundImage: `url(/img/bg.jpg)` }}
